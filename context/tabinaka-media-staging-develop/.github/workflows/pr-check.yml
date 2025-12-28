@@ -1,0 +1,89 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  quick-check:
+    name: 🚀 高速チェック
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: ESLint チェック
+        run: npm run lint
+
+      - name: 型チェック
+        run: npm run type-check
+
+      - name: ビルド確認
+        run: npm run build
+
+  size-check:
+    name: 📊 バンドルサイズチェック
+    runs-on: ubuntu-latest
+    needs: quick-check
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and analyze
+        run: |
+          npm run build
+          echo "### 📦 Build Output Size" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          du -sh .next/ >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+  pr-summary:
+    name: 📋 PR Summary
+    runs-on: ubuntu-latest
+    needs: [quick-check, size-check]
+    if: always()
+
+    steps:
+      - name: Create PR Summary
+        run: |
+          echo "## 🔍 PR Check Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ needs.quick-check.result }}" == "success" ]; then
+            echo "✅ **基本チェック**: PASSED" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **基本チェック**: FAILED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ needs.size-check.result }}" == "success" ]; then
+            echo "✅ **サイズチェック**: PASSED" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **サイズチェック**: FAILED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📝 チェック内容" >> $GITHUB_STEP_SUMMARY
+          echo "- ESLint による静的解析" >> $GITHUB_STEP_SUMMARY
+          echo "- TypeScript 型チェック" >> $GITHUB_STEP_SUMMARY
+          echo "- Next.js ビルド確認" >> $GITHUB_STEP_SUMMARY
+          echo "- バンドルサイズ測定" >> $GITHUB_STEP_SUMMARY

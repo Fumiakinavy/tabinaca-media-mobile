@@ -1,0 +1,20 @@
+# .github/workflows/ci-tabinaka-media.yml
+name: CI – Tabinaka Media (Disabled)
+
+# このワークフローは手動実行のみに設定されています
+# プロジェクト構造が 'services/tabinaka-media' ディレクトリを使用していないため
+# 代わりに ci-advanced.yml を使用してください
+
+on:
+  workflow_dispatch: # 手動実行のみ
+
+jobs:
+  disabled:
+    name: ⚠️ Workflow Disabled
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow Disabled Notice
+        run: |
+          echo "このワークフローは無効化されています。"
+          echo "プロジェクト構造に合わせて ci-advanced.yml を使用してください。"
+          echo "This workflow is disabled. Please use ci-advanced.yml instead."

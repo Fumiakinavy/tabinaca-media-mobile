@@ -1,0 +1,426 @@
+{
+  "header": {
+    "home": "홈",
+    "articles": "기사",
+    "experiences": "체험",
+    "events": "이벤트",
+    "chat": "Gappy chat"
+  },
+  "breadcrumbs": {
+    "home": "홈",
+    "articles": "기사",
+    "experiences": "체험",
+    "events": "이벤트"
+  },
+  "hero": {
+    "title": "시부야에서 길을 잃었나요?",
+    "subtitle": "최고의 갭타임을 찾아보세요",
+    "description": "시부야에서 한 시간의 여유가 있나요? 독특한 현지 체험을 즉시 발견하고 예약하세요. 시간을 그냥 보내지 말고 잊을 수 없는 경험으로 만드세요.",
+    "findGaptime": "내 갭타임 찾기",
+    "learnMore": "더 알아보기",
+    "instantBooking": "즉시 예약",
+    "exclusiveCoupons": "전용 쿠폰",
+    "localGuides": "현지 가이드",
+    "scrollToExplore": "스크롤하여 탐색"
+  },
+  "howToGappy": {
+    "title": "Gappy 사용법",
+    "step1": {
+      "title": "여행 동기 선택",
+      "description": "당신의 기분과 관심사에 맞는 체험 유형을 선택하세요"
+    },
+    "step2": {
+      "title": "좋아하는 갭타임 찾기",
+      "description": "이용 가능한 시간에 완벽하게 맞는 활동을 발견하세요"
+    },
+    "step3": {
+      "title": "쿠폰 받기 또는 예약하기!",
+      "description": "독점 혜택을 확보하거나 선택한 체험을 즉시 예약하세요"
+    }
+  },
+  "articles": {
+    "title": "기사",
+    "subtitle": "시부야의 숨겨진 보석과 여가 시간을 위한 내부자 팁을 발견하세요.",
+    "viewAll": "모두 보기",
+    "readTime": "분 읽기",
+    "noArticles": "사용 가능한 기사가 없습니다"
+  },
+  "experiences": {
+    "title": "체험",
+    "subtitle": "전용 쿠폰과 전문 현지 가이드와 함께하는 엄선된 시부야 활동.",
+    "viewAll": "모두 보기",
+    "chooseMotivation": "여행 동기를 선택하세요",
+    "noExperiences": "사용 가능한 체험이 없습니다",
+    "chooseYourMotivation": "여행 동기 선택하기",
+    "findPerfectActivity": "당신의 여행에 완벽한 활동 찾기",
+    "whatKindOfExperience": "어떤 체험을 찾고 계신가요?",
+    "searchPlaceholder": "체험 검색 (예: 라멘, 사우나, 아트)",
+    "selectMotivationDescription": "여행 동기를 선택하여 당신의 관심사에 맞는 엄선된 체험을 발견하고 시부야에서 잊을 수 없는 추억을 만드세요.",
+    "explore": "탐험하기",
+    "whyChooseMotivation": "왜 동기별로 선택해야 할까요?",
+    "motivationBenefits": "동기 기반 접근 방식은 여행 목표에 진정으로 공감하는 체험을 찾고 의미 있는 추억을 만드는 데 도움이 됩니다.",
+    "personalized": "개인화",
+    "personalizedDesc": "특정 관심사와 여행 목표에 맞는 체험 찾기",
+    "curated": "엄선",
+    "curatedDesc": "진정한 현지 체험을 제공하는 엄선된 활동",
+    "memorable": "추억",
+    "memorableDesc": "정말 중요한 체험으로 지속적인 추억 만들기"
+  },
+  "events": {
+    "title": "이벤트",
+    "subtitle": "다가오는 시부야 축제, 계절 축하 행사 및 특별 이벤트.",
+    "viewAll": "모두 보기",
+    "noEvents": "사용 가능한 이벤트가 없습니다"
+  },
+  "motivations": {
+    "shopCraft": "쇼핑 & 공예",
+    "familyTime": "가족 시간",
+    "moveAdventure": "액티브 & 어드벤처",
+    "relaxRecharge": "휴식 & 재충전",
+    "cultureHeritage": "문화 & 전통",
+    "strollObserve": "산책 & 관찰",
+    "tasteLocal": "현지 음식 맛보기",
+    "featuredActivities": "추천 체험",
+    "totalExperiences": "총 {{count}}개 체험",
+    "shopCraftDesc": "독특한 공예품과 쇼핑 경험을 만들고 발견하세요",
+    "familyTimeDesc": "시부야에서 사랑하는 사람들과 잊을 수 없는 추억을 만드세요",
+    "moveAdventureDesc": "도쿄의 역동적인 중심에서 스릴 넘치는 모험을 발견하세요",
+    "relaxRechargeDesc": "분주한 시부야의 중심에서 완벽한 탈출구를 찾으세요",
+    "cultureHeritageDesc": "진정한 일본 문화와 전통에 몰입하세요",
+    "strollObserveDesc": "시부야의 거리를 천천히 산책하며 현지 생활을 관찰하세요",
+    "tasteLocalDesc": "현지 맛과 음식 문화를 경험하고 시부야의 요리 현장을 즐기세요"
+  },
+  "buttons": {
+    "submit": "제출",
+    "send": "보내기",
+    "cancel": "취소",
+    "close": "닫기",
+    "readMore": "더 읽기",
+    "bookNow": "지금 예약",
+    "loadMore": "더 보기"
+  },
+  "quizResultModal": {
+    "diagnosisLabel": "16가지 유형 진단 결과",
+    "currentType": "현재 유형",
+    "goChat": "Gappy 채팅으로 이동",
+    "editQuiz": "퀴즈에서 수정",
+    "shareCard": "카드 공유",
+    "viewExperiences": "체험 보기",
+    "signOut": "로그아웃",
+    "noResultHeroTitle": "아직 진단 결과가 없습니다",
+    "noResultHeroDescription": "퀴즈를 완료하면 개인화된 추천을 받아볼 수 있어요.",
+    "noResultBodyTitle": "여행 스타일을 알려주세요",
+    "noResultBodyDescription": "퀴즈를 완료하면 Gappy 채팅과 추천 경험이 맞춤 설정됩니다.",
+    "goQuiz": "퀴즈 풀기",
+    "closeResultsAria": "결과 닫기",
+    "closeAria": "닫기"
+  },
+  "shareCard": {
+    "pageTitle": "{{code}} | 공유 카드",
+    "shareLink": "공유 링크",
+    "copyLink": "복사",
+    "shareX": "X에서 공유",
+    "shareXImage": "Share on X",
+    "shareInstagram": "Share on Instagram",
+    "shareSheet": "인스타그램/공유 시트",
+    "downloadImage": "이미지 다운로드",
+    "copyImage": "이미지 복사",
+    "downloading": "생성 중...",
+    "copying": "복사 중...",
+    "noteInstagram": "인스타그램은 이미지를 저장한 후 앱에서 게시해 주세요.",
+    "xImageCopied": "이미지를 클립보드에 복사했습니다. X 게시물 작성 화면에서 이미지를 붙여넣어 주세요.",
+    "xImageDownloaded": "이미지를 다운로드했습니다. X 게시물 작성 화면에서 이미지를 업로드해 주세요."
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "total": "총계"
+  },
+  "footer": {
+    "description": "일본에서의 자유시간을 최대한 활용할 수 있는 특별한 경험과 이벤트를 발견하세요.",
+    "sections": {
+      "services": "서비스",
+      "support": "지원",
+      "company": "회사"
+    },
+    "links": {
+      "articles": "기사",
+      "experiences": "체험",
+      "events": "이벤트",
+      "faq": "자주 묻는 질문",
+      "contact": "문의하기",
+      "help": "도움말",
+      "about": "회사 소개",
+      "terms": "이용약관",
+      "privacy": "개인정보처리방침",
+      "cookies": "쿠키 정책"
+    },
+    "copyright": "모든 권리를 보유합니다.",
+    "backToTop": "맨 위로"
+  },
+  "pages": {
+    "article": {
+      "pageTitle": "| Gappy 기사",
+      "relatedArticles": "관련 기사",
+      "shareThisArticle": "이 기사 공유",
+      "backToArticles": "기사 목록으로 돌아가기"
+    },
+    "experience": {
+      "pageTitle": "| Gappy 체험",
+      "getExclusiveCoupon": "전용 쿠폰 받기",
+      "getCouponDescription": "지금 등록하여 이 체험의 특별 할인 쿠폰을 받고 일본의 더 많은 놀라운 활동을 발견하세요!",
+      "locationAccess": "위치 및 교통",
+      "locationDescription": "아래 상호작용 지도로 쉽게 찾아보세요. 위치를 확인하고 방문을 계획하세요!",
+      "address": "주소",
+      "relatedExperiences": "관련 체험",
+      "backToExperiences": "체험 목록으로 돌아가기",
+      "bookNow": "지금 예약",
+      "getCoupon": "쿠폰 받기",
+      "duration": "소요 시간",
+      "level": "난이도",
+      "price": "가격",
+      "maxParticipants": "최대 참가자 수",
+      "included": "포함 사항",
+      "requirements": "요구 사항",
+      "priceFrom": "가격："
+    },
+    "couponForm": {
+      "title": "전용 쿠폰 받기",
+      "description": "지금 등록하여 이 체험의 특별 할인 쿠폰을 받고 일본의 더 많은 놀라운 활동을 발견하세요!",
+      "email": "이메일 주소",
+      "name": "성명",
+      "phone": "전화번호",
+      "submit": "쿠폰 보내기",
+      "success": "쿠폰이 이메일로 전송되었습니다!",
+      "error": "오류가 발생했습니다. 다시 시도해주세요.",
+      "enterEmail": "이메일 주소를 입력해주세요",
+      "enterName": "성명을 입력해주세요",
+      "sending": "전송 중..."
+    },
+    "terms": {
+      "title": "이용약관",
+      "lastUpdated": "최종 업데이트",
+      "agreement": {
+        "title": "약관 동의",
+        "content": "당사의 웹사이트 및 서비스를 이용하시면 본 이용약관에 동의하는 것으로 간주됩니다. 본 약관에 동의하지 않으시면 웹사이트나 서비스를 이용하지 마십시오."
+      },
+      "couponService": {
+        "title": "쿠폰 서비스",
+        "content": "당사 웹사이트는 다양한 체험에 대한 쿠폰을 제공합니다. 이러한 쿠폰은 각 체험 제공업체의 이용약관의 적용을 받습니다. 쿠폰 사용 또는 체험 자체로 인해 발생하는 문제에 대해 당사는 책임을 지지 않습니다."
+      },
+      "intellectualProperty": {
+        "title": "지적재산권",
+        "content": "당사 웹사이트의 콘텐츠(텍스트, 그래픽, 로고, 이미지 포함)는 당사 또는 라이선서의 재산이며 저작권 및 기타 지적재산권법의 보호를 받습니다."
+      },
+      "limitationOfLiability": {
+        "title": "책임의 제한",
+        "content": "어떠한 경우에도 당사는 이익, 데이터, 사용, 영업권 또는 기타 무형 손실의 손실을 포함하되 이에 국한되지 않는 간접적, 우발적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다."
+      },
+      "contact": {
+        "title": "문의하기",
+        "content": "본 이용약관에 대해 질문이 있으시면 아래로 연락해 주세요"
+      }
+    },
+    "privacy": {
+      "title": "개인정보처리방침",
+      "lastUpdated": "최종 업데이트",
+      "introduction": {
+        "title": "소개",
+        "content": "Gappy에 오신 것을 환영합니다! 당사는 귀하의 개인정보 보호에 최선을 다하고 있습니다. 본 개인정보처리방침은 귀하가 당사의 웹사이트 및 서비스를 이용할 때 당사가 귀하의 정보를 수집, 사용, 공개 및 보호하는 방법을 설명합니다. 본 개인정보처리방침을 주의 깊게 읽어주세요. 본 개인정보처리방침의 조건에 동의하지 않으시면 사이트에 접속하지 마십시오."
+      },
+      "informationCollection": {
+        "title": "수집하는 정보",
+        "description": "당사는 다양한 방법으로 귀하에 관한 정보를 수집할 수 있습니다. 사이트에서 수집할 수 있는 정보는 다음과 같습니다:",
+        "personalData": {
+          "title": "개인 데이터",
+          "content": "쿠폰 등록 또는 사이트와 상호작용할 때 자발적으로 제공하는 이름, 이메일 주소, 인구통계 정보(나이 및 국적 등)와 같은 개인 식별 정보."
+        },
+        "derivativeData": {
+          "title": "파생 데이터",
+          "content": "사이트에 접속할 때 당사 서버가 자동으로 수집하는 정보(IP 주소, 브라우저 유형, 운영 체제, 접속 시간, 사이트 접속 직전 및 직후에 본 페이지 등)."
+        }
+      },
+      "useOfInformation": {
+        "title": "정보 사용",
+        "description": "정확한 정보를 보유함으로써 당사는 원활하고 효율적이며 맞춤화된 경험을 제공할 수 있습니다. 구체적으로, 당사는 사이트를 통해 수집한 정보를 다음과 같이 사용할 수 있습니다:",
+        "emailCoupon": "요청한 쿠폰을 이메일로 발송",
+        "createAccount": "계정 생성 및 관리",
+        "statisticalData": "내부용 익명 통계 데이터 및 분석 생성",
+        "efficiency": "사이트의 효율성 및 운영 개선",
+        "monitorUsage": "사용량 및 트렌드를 모니터링하고 분석하여 사이트에서의 경험 개선"
+      },
+      "disclosure": {
+        "title": "정보 공개",
+        "description": "당사는 특정 상황에서 귀하에 관해 수집한 정보를 공유할 수 있습니다. 귀하의 정보는 다음과 같이 공개될 수 있습니다:",
+        "byLaw": {
+          "title": "법률에 의한 또는 권리 보호",
+          "content": "법적 절차에 응답하거나 정책의 잠재적 위반을 조사 또는 시정하거나 타인의 권리, 재산 및 안전을 보호하기 위해 귀하에 관한 정보의 공개가 필요하다고 판단되는 경우, 당사는 적용 가능한 법률, 규칙 또는 규정에 따라 허용되거나 요구되는 범위 내에서 귀하의 정보를 공유할 수 있습니다."
+        },
+        "thirdParty": {
+          "title": "제3자 서비스 제공업체",
+          "content": "당사는 데이터 분석, 이메일 배송, 호스팅 서비스 및 고객 서비스를 포함하여 당사를 위해 또는 당사를 대신하여 서비스를 수행하는 제3자와 귀하의 정보를 공유할 수 있습니다."
+        }
+      },
+      "contact": {
+        "title": "문의하기",
+        "content": "본 개인정보처리방침에 대해 질문이나 의견이 있으시면 아래로 연락해 주세요"
+      }
+    },
+    "about": {
+      "title": "회사 소개",
+      "subtitle": "Gappy Inc.는 여행자의 자투리 시간을 가치 있는 경험으로 변환하는 혁신적인 회사입니다.",
+      "companyInfo": {
+        "title": "회사 정보",
+        "companyName": "회사명",
+        "companyNameValue": "Gappy Inc.",
+        "englishName": "영문명",
+        "englishNameValue": "Gappy Inc.",
+        "capital": "자본금",
+        "capitalValue": "400만 엔",
+        "president": "대표이사",
+        "presidentValue": "아사노 미츠키",
+        "address": "주소",
+        "addressValue": "일본 도쿄도 시부야구 도겐자카 1-10-8 시부야 도겐자카 도큐빌딩 3F",
+        "business": "사업 내용",
+        "businessValue1": "인바운드 관광 컨설팅 서비스",
+        "businessValue2": "여행 체험 매칭 플랫폼 운영",
+        "businessValue3": "타비나카 미디어 운영",
+        "employees": "직원 수",
+        "employeesValue": "3명",
+        "contact": "연락처",
+        "tel": "전화",
+        "email": "이메일",
+        "website": "웹사이트"
+      },
+      "team": {
+        "title": "경영진 및 주요 멤버",
+        "ceo": {
+          "name": "아사노 미츠키",
+          "title": "CEO 겸 대표이사",
+          "role": "담당 업무",
+          "responsibility1": "전체 전략 및 최종 의사결정",
+          "responsibility2": "마케팅 전략, 목표 설정, 캠페인 기획 및 인플루언서 파트너십",
+          "responsibility3": "클라이언트(관광 사업자, 지자체 등)와의 최종 협상",
+          "responsibility4": "컨설팅 프로젝트의 전체 방향 및 품질 관리",
+          "responsibility5": "플랫폼 비전, 방향 및 UI/UX 정책 의사결정"
+        },
+        "cto": {
+          "name": "카타야마 유타",
+          "title": "개발 책임자",
+          "role": "담당 업무",
+          "responsibility1": "풀스택 개발자",
+          "responsibility2": "AI 및 머신러닝 시스템 개발 전문가",
+          "responsibility3": "플랫폼 기술 아키텍처 설계",
+          "responsibility4": "개인정보보호 관리 책임자"
+        },
+        "operations": {
+          "name": "미츠타니 히로와",
+          "title": "운영 책임자",
+          "role": "담당 업무",
+          "responsibility1": "유학생 커뮤니티를 통한 테스트 사용자 확보",
+          "responsibility2": "캠페인 실행을 포함한 전체 운영",
+          "responsibility3": "유학생 커뮤니티를 통한 조사 및 문서화",
+          "responsibility4": "컨설팅 프로젝트 실행 지원(현지 조사, SNS/웹 활용 등)"
+        }
+      },
+      "history": {
+        "title": "연혁",
+        "event1": {
+          "date": "2024년 12월",
+          "description": "사업 구상 및 시장 조사 시작"
+        },
+        "event2": {
+          "date": "2025년 5월",
+          "description": "회사 웹사이트 런칭"
+        },
+        "event3": {
+          "date": "2025년 6월",
+          "description": "법인 등기 완료"
+        },
+        "event4": {
+          "date": "2025년 7월",
+          "description": "타비나카 미디어 런칭"
+        },
+        "event5": {
+          "date": "2025년 7월",
+          "description": "EV로부터 자금 조달"
+        },
+        "event6": {
+          "date": "2025년 겨울",
+          "description": "Gappy 플랫폼 베타 버전 출시 예정"
+        }
+      },
+      "cta": {
+        "title": "언제든지 연락해 주세요",
+        "description": "파트너십, 서비스 도입 또는 기타 문의사항이 있으시면 편하게 연락해 주세요."
+      }
+    },
+    "contactUs": {
+      "title": "문의하기",
+      "subtitle": "파트너십, 서비스 도입 또는 기타 문의사항이 있으시면 편하게 연락해 주세요. 신속하게 답변 드리겠습니다.",
+      "form": {
+        "title": "문의 양식",
+        "description": "제품 및 서비스에 대한 문의를 받습니다. 검토 후 ",
+        "responseTime": "영업일 기준 3일 이내",
+        "responseTimeEnd": "에 담당자가 연락드리겠습니다.",
+        "basicInfo": "기본 정보",
+        "companyName": "회사명",
+        "required": "*필수",
+        "companyPlaceholder": "예: Gappy Inc.",
+        "contactName": "담당자명",
+        "namePlaceholder": "예: 홍길동",
+        "email": "이메일 주소",
+        "emailPlaceholder": "예: info@example.com",
+        "phone": "전화번호",
+        "optional": "선택",
+        "phonePlaceholder": "예: 03-1234-5678",
+        "inquiryDetails": "문의 내용",
+        "inquiryType": "문의 유형",
+        "selectType": "선택해 주세요",
+        "type1": "인바운드 컨설팅에 대해",
+        "type2": "Gappy 플랫폼 얼리 테스터 프로그램에 대해",
+        "type3": "파트너십/투자에 대해",
+        "type4": "채용에 대해",
+        "type5": "기타 문의",
+        "message": "문의 내용",
+        "messagePlaceholder": "질문이나 상담 내용을 자세히 알려주세요.\n여러 항목이 있는 경우 목록으로 작성해 주시면 감사하겠습니다.",
+        "privacyPolicy": "에 동의하고 개인정보 처리에 동의합니다",
+        "privacyPolicyLink": "개인정보처리방침",
+        "submit": "확인 화면으로",
+        "charactersCount": "자"
+      },
+      "otherMethods": {
+        "title": "다른 문의 방법",
+        "phone": {
+          "title": "전화 문의",
+          "description": "급한 문의는 전화로 연락해 주세요. 평일 9:00~18:00에 이용 가능합니다.",
+          "number": "070-1185-3131"
+        },
+        "email": {
+          "title": "이메일 문의",
+          "description": "급하지 않은 문의는 이메일로 연락해 주세요. 24시간 이용 가능합니다.",
+          "address": "mitsuki@gappy.jp"
+        }
+      },
+      "companyInfo": {
+        "title": "회사 정보",
+        "basic": {
+          "title": "기본 정보",
+          "companyName": "회사: Gappy Inc.",
+          "president": "대표: 아사노 미츠키",
+          "business": "사업: 인바운드 관광 솔루션 개발 및 제공"
+        },
+        "location": {
+          "title": "위치 및 연락처",
+          "address": "주소: ",
+          "postalCode": "〒150-0043",
+          "addressLine1": "도쿄도 시부야구 도겐자카 1-10-8",
+          "addressLine2": "시부야 도겐자카 도큐빌딩 3F",
+          "phone": "전화: ",
+          "email": "이메일: "
+        }
+      }
+    }
+  }
+} 

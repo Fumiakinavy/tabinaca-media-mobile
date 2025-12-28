@@ -1,0 +1,36 @@
+# ─────────── Node.js ───────────
+node_modules/
+
+# ───────── Next.js ビルド成果物 ─────────
+.next/
+out/
+
+# ───────── 環境変数 ─────────
+.env.local
+.env.*.local
+.env.prod.json
+
+# ───────── ログ ─────────
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# ───────── TypeScript キャッシュ ─────────
+*.tsbuildinfo
+
+# ───────── テストカバレッジ ─────────
+coverage/
+
+# ───────── OS／エディタ固有 ─────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ───────── その他一時ファイル ─────────
+.cache/
+dist/
+
+
+.env

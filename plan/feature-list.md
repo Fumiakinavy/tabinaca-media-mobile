@@ -19,12 +19,6 @@
 - AIチャットへのCTA
 - SEOメタ/OG/Twitterカード/構造化データ
 
-## 4. 記事（Articles）
-- 記事一覧（Top/New/All）スライダー表示
-- 記事詳細（MDX）
-- 記事メタ情報（タグ/著者/読了時間/位置情報）
-- 記事ページの構造化データ（Article + Breadcrumb）
-
 ## 5. 体験（Experiences）
 - 体験一覧（MDXベース）
 - 検索/フィルタ（キーワード、所要時間など）

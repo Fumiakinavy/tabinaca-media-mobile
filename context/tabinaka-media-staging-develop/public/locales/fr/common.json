@@ -1,0 +1,426 @@
+{
+  "header": {
+    "home": "Accueil",
+    "articles": "Articles",
+    "experiences": "Expériences",
+    "events": "Événements",
+    "chat": "Gappy chat"
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "articles": "Articles",
+    "experiences": "Expériences",
+    "events": "Événements"
+  },
+  "hero": {
+    "title": "Perdu à Shibuya ?",
+    "subtitle": "Trouvez votre meilleur GAPTIME",
+    "description": "Vous avez une heure libre à Shibuya ? Découvrez et réservez instantanément des expériences locales uniques. Ne perdez pas seulement votre temps—rendez-le inoubliable.",
+    "findGaptime": "Trouvez Mon Gaptime",
+    "learnMore": "En Savoir Plus",
+    "instantBooking": "Réservation Instantanée",
+    "exclusiveCoupons": "Coupons Exclusifs",
+    "localGuides": "Guides Locaux",
+    "scrollToExplore": "Faire défiler pour explorer"
+  },
+  "howToGappy": {
+    "title": "Comment utiliser Gappy ?",
+    "step1": {
+      "title": "Choisissez votre motivation de voyage",
+      "description": "Sélectionnez le type d'expérience qui correspond à votre humeur et à vos intérêts"
+    },
+    "step2": {
+      "title": "Trouvez votre temps libre favori",
+      "description": "Découvrez des activités qui s'adaptent parfaitement à votre temps disponible"
+    },
+    "step3": {
+      "title": "Obtenez un coupon ou réservez !",
+      "description": "Obtenez des offres exclusives ou réservez instantanément votre expérience choisie"
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "subtitle": "Découvrez les joyaux cachés de Shibuya et les conseils d'initiés pour votre temps libre.",
+    "viewAll": "Voir Tout",
+    "readTime": "min de lecture",
+    "noArticles": "Aucun article disponible"
+  },
+  "experiences": {
+    "title": "Expériences",
+    "subtitle": "Activités de Shibuya sélectionnées avec des coupons exclusifs et des guides locaux experts.",
+    "viewAll": "Voir Tout",
+    "chooseMotivation": "Choisissez votre motivation de voyage",
+    "noExperiences": "Aucune expérience disponible",
+    "chooseYourMotivation": "Choisissez votre motivation de voyage",
+    "findPerfectActivity": "Trouvez l'activité parfaite pour votre voyage",
+    "whatKindOfExperience": "Quel type d'expérience recherchez-vous ?",
+    "searchPlaceholder": "Rechercher des expériences (ex: ramen, sauna, art)",
+    "selectMotivationDescription": "Sélectionnez votre motivation de voyage pour découvrir des expériences sélectionnées qui correspondent à vos intérêts et créez des souvenirs inoubliables à Shibuya.",
+    "explore": "Explorer",
+    "whyChooseMotivation": "Pourquoi choisir par motivation ?",
+    "motivationBenefits": "Notre approche basée sur la motivation vous aide à trouver des expériences qui résonnent vraiment avec vos objectifs de voyage et créent des souvenirs significatifs.",
+    "personalized": "Personnalisé",
+    "personalizedDesc": "Trouvez des expériences qui correspondent à vos intérêts et objectifs de voyage spécifiques",
+    "curated": "Sélectionné",
+    "curatedDesc": "Des expériences triées sur le volet qui offrent des expériences locales authentiques",
+    "memorable": "Mémorable",
+    "memorableDesc": "Créez des souvenirs durables avec des expériences qui comptent vraiment pour vous"
+  },
+  "events": {
+    "title": "Événements",
+    "subtitle": "Festivals à venir de Shibuya, célébrations saisonnières et événements spéciaux.",
+    "viewAll": "Voir Tout",
+    "noEvents": "Aucun événement disponible"
+  },
+  "motivations": {
+    "shopCraft": "Shopping & Artisanat",
+    "familyTime": "Temps en Famille",
+    "moveAdventure": "Mouvement & Aventure",
+    "relaxRecharge": "Détente & Recharge",
+    "cultureHeritage": "Culture & Patrimoine",
+    "strollObserve": "Promenade & Observation",
+    "tasteLocal": "Goûter Local",
+    "featuredActivities": "Activités phares",
+    "totalExperiences": "{{count}} expériences",
+    "shopCraftDesc": "Créez et découvrez des artisanats uniques et des expériences de shopping",
+    "familyTimeDesc": "Créez des souvenirs inoubliables avec vos proches à Shibuya",
+    "moveAdventureDesc": "Découvrez des aventures passionnantes au cœur dynamique de Tokyo",
+    "relaxRechargeDesc": "Trouvez votre échappatoire parfaite au cœur du Shibuya animé",
+    "cultureHeritageDesc": "Plongez dans la culture et les traditions japonaises authentiques",
+    "strollObserveDesc": "Promenez-vous tranquillement dans les rues de Shibuya et observez la vie locale",
+    "tasteLocalDesc": "Dégustez des saveurs locales et la culture culinaire, profitez de la scène gastronomique de Shibuya"
+  },
+  "buttons": {
+    "submit": "Soumettre",
+    "send": "Envoyer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "readMore": "Lire Plus",
+    "bookNow": "Réserver Maintenant",
+    "loadMore": "Charger plus"
+  },
+  "quizResultModal": {
+    "diagnosisLabel": "Résultat du diagnostic 16 types",
+    "currentType": "Type actuel",
+    "goChat": "Aller au Gappy Chat",
+    "editQuiz": "Modifier le quiz",
+    "shareCard": "Partager la carte",
+    "viewExperiences": "Voir les expériences",
+    "signOut": "Se déconnecter",
+    "noResultHeroTitle": "Pas encore de résultat",
+    "noResultHeroDescription": "Complétez le quiz pour débloquer des recommandations personnalisées.",
+    "noResultBodyTitle": "Personnalisez votre parcours",
+    "noResultBodyDescription": "Finissez le quiz pour que le Gappy Chat s'adapte à vos envies.",
+    "goQuiz": "Faire le quiz",
+    "closeResultsAria": "Fermer les résultats",
+    "closeAria": "Fermer"
+  },
+  "shareCard": {
+    "pageTitle": "{{code}} | Carte à partager",
+    "shareLink": "Lien de partage",
+    "copyLink": "Copier",
+    "shareX": "Partager sur X",
+    "shareXImage": "Share on X",
+    "shareInstagram": "Share on Instagram",
+    "shareSheet": "Instagram / Feuille de partage",
+    "downloadImage": "Télécharger l'image",
+    "copyImage": "Copier l'image",
+    "downloading": "Génération...",
+    "copying": "Copie...",
+    "noteInstagram": "Pour Instagram, enregistrez l'image puis publiez depuis l'application.",
+    "xImageCopied": "Image copiée dans le presse-papiers. Veuillez coller l'image dans l'éditeur de publication X.",
+    "xImageDownloaded": "Image téléchargée. Veuillez télécharger l'image dans l'éditeur de publication X."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "total": "Total"
+  },
+  "footer": {
+    "description": "Découvrez des expériences extraordinaires et des événements pour profiter au maximum de votre temps libre au Japon.",
+    "sections": {
+      "services": "Services",
+      "support": "Assistance",
+      "company": "Entreprise"
+    },
+    "links": {
+      "articles": "Articles",
+      "experiences": "Expériences",
+      "events": "Événements",
+      "faq": "FAQ",
+      "contact": "Nous Contacter",
+      "help": "Aide",
+      "about": "À Propos",
+      "terms": "Conditions d'Utilisation",
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique des Cookies"
+    },
+    "copyright": "Tous droits réservés.",
+    "backToTop": "Retour en Haut"
+  },
+  "pages": {
+    "article": {
+      "pageTitle": "| Articles Gappy",
+      "relatedArticles": "Articles Connexes",
+      "shareThisArticle": "Partager Cet Article",
+      "backToArticles": "Retour aux Articles"
+    },
+    "experience": {
+      "pageTitle": "| Expériences Gappy",
+      "getExclusiveCoupon": "Obtenez Votre Coupon Exclusif",
+      "getCouponDescription": "Inscrivez-vous maintenant pour recevoir un coupon de réduction spécial pour cette expérience et découvrir plus d'activités incroyables au Japon!",
+      "locationAccess": "Lieu et Accès",
+      "locationDescription": "Trouvez-nous facilement avec la carte interactive ci-dessous. Vérifiez l'emplacement et planifiez votre visite!",
+      "address": "Adresse",
+      "relatedExperiences": "Expériences Connexes",
+      "backToExperiences": "Retour aux Expériences",
+      "bookNow": "Réserver Maintenant",
+      "getCoupon": "Obtenir le Coupon",
+      "duration": "Durée",
+      "level": "Niveau",
+      "price": "Prix",
+      "maxParticipants": "Participants Maximum",
+      "included": "Inclus",
+      "requirements": "Exigences",
+      "priceFrom": "À partir de："
+    },
+    "couponForm": {
+      "title": "Obtenez Votre Coupon Exclusif",
+      "description": "Inscrivez-vous maintenant pour recevoir un coupon de réduction spécial pour cette expérience et découvrir plus d'activités incroyables au Japon!",
+      "email": "Adresse Email",
+      "name": "Votre Nom",
+      "phone": "Numéro de Téléphone",
+      "submit": "Envoyer le Coupon",
+      "success": "Coupon envoyé à votre email!",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "enterEmail": "Veuillez entrer votre adresse email",
+      "enterName": "Veuillez entrer votre nom",
+      "sending": "Envoi en cours..."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation",
+      "lastUpdated": "Dernière mise à jour",
+      "agreement": {
+        "title": "Accord aux Conditions",
+        "content": "En utilisant notre site Web et nos services, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site Web ou nos services."
+      },
+      "couponService": {
+        "title": "Service de Coupons",
+        "content": "Notre site Web fournit des coupons pour diverses expériences. Ces coupons sont soumis aux conditions générales de chaque fournisseur d'expérience. Nous ne sommes pas responsables des problèmes découlant de l'utilisation des coupons ou des expériences elles-mêmes."
+      },
+      "intellectualProperty": {
+        "title": "Propriété Intellectuelle",
+        "content": "Le contenu de notre site Web, y compris les textes, graphiques, logos et images, est la propriété de notre entreprise ou de nos concédants de licence et est protégé par le droit d'auteur et d'autres lois sur la propriété intellectuelle."
+      },
+      "limitationOfLiability": {
+        "title": "Limitation de Responsabilité",
+        "content": "En aucun cas, nous ne serons responsables de tout dommage indirect, accessoire, spécial, consécutif ou punitif, y compris, mais sans s'y limiter, la perte de profits, de données, d'utilisation, de clientèle ou d'autres pertes intangibles."
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "content": "Si vous avez des questions sur ces Conditions d'Utilisation, veuillez nous contacter à"
+      }
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "lastUpdated": "Dernière mise à jour",
+      "introduction": {
+        "title": "Introduction",
+        "content": "Bienvenue chez Gappy ! Nous nous engageons à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre site Web et nos services. Veuillez lire attentivement cette Politique de Confidentialité. Si vous n'acceptez pas les termes de cette Politique de Confidentialité, veuillez ne pas accéder au site."
+      },
+      "informationCollection": {
+        "title": "Informations que nous collectons",
+        "description": "Nous pouvons collecter des informations vous concernant de diverses manières. Les informations que nous pouvons collecter sur le site comprennent :",
+        "personalData": {
+          "title": "Données Personnelles",
+          "content": "Des informations personnellement identifiables telles que votre nom, adresse email et informations démographiques (comme l'âge et la nationalité) que vous fournissez volontairement lors de l'inscription aux coupons ou lors de l'interaction avec le site."
+        },
+        "derivativeData": {
+          "title": "Données Dérivées",
+          "content": "Des informations que nos serveurs collectent automatiquement lorsque vous accédez au site, telles que votre adresse IP, le type de navigateur, le système d'exploitation, les heures d'accès et les pages que vous avez consultées immédiatement avant et après l'accès au site."
+        }
+      },
+      "useOfInformation": {
+        "title": "Utilisation de vos informations",
+        "description": "Avoir des informations précises sur vous nous permet de vous offrir une expérience fluide, efficace et personnalisée. Plus précisément, nous pouvons utiliser les informations collectées à votre sujet via le site pour :",
+        "emailCoupon": "Envoyer les coupons demandés par email",
+        "createAccount": "Créer et gérer votre compte",
+        "statisticalData": "Générer des données statistiques anonymes et des analyses à usage interne",
+        "efficiency": "Améliorer l'efficacité et le fonctionnement du site",
+        "monitorUsage": "Surveiller et analyser l'utilisation et les tendances pour améliorer votre expérience sur le site"
+      },
+      "disclosure": {
+        "title": "Divulgation de vos informations",
+        "description": "Nous pouvons partager les informations que nous avons collectées à votre sujet dans certaines situations. Vos informations peuvent être divulguées comme suit :",
+        "byLaw": {
+          "title": "Par la loi ou pour protéger les droits",
+          "content": "Si nous pensons que la divulgation d'informations vous concernant est nécessaire pour répondre à une procédure judiciaire, enquêter ou remédier aux violations potentielles de nos politiques, ou protéger les droits, la propriété et la sécurité d'autrui, nous pouvons partager vos informations dans la mesure permise ou requise par la loi, la règle ou le règlement applicable."
+        },
+        "thirdParty": {
+          "title": "Fournisseurs de services tiers",
+          "content": "Nous pouvons partager vos informations avec des tiers qui effectuent des services pour nous ou en notre nom, y compris l'analyse de données, la livraison d'emails, les services d'hébergement et le service client."
+        }
+      },
+      "contact": {
+        "title": "Nous Contacter",
+        "content": "Si vous avez des questions ou des commentaires sur cette Politique de Confidentialité, veuillez nous contacter à"
+      }
+    },
+    "about": {
+      "title": "À Propos de Nous",
+      "subtitle": "Gappy Inc. est une entreprise innovante qui transforme les temps morts des voyageurs en expériences précieuses.",
+      "companyInfo": {
+        "title": "Informations sur l'entreprise",
+        "companyName": "Nom de l'entreprise",
+        "companyNameValue": "Gappy Inc.",
+        "englishName": "Nom anglais",
+        "englishNameValue": "Gappy Inc.",
+        "capital": "Capital",
+        "capitalValue": "4 000 000 JPY",
+        "president": "Président",
+        "presidentValue": "Mitsuki Asano",
+        "address": "Adresse",
+        "addressValue": "Shibuya Dogenzaka Tokyu Building 3F, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japon",
+        "business": "Activité",
+        "businessValue1": "Services de conseil en tourisme entrant",
+        "businessValue2": "Exploitation de plateforme de mise en relation d'expériences de voyage",
+        "businessValue3": "Exploitation de médias Tabinaka",
+        "employees": "Employés",
+        "employeesValue": "3 personnes",
+        "contact": "Contact",
+        "tel": "TÉL",
+        "email": "E-mail",
+        "website": "Site Web"
+      },
+      "team": {
+        "title": "Équipe dirigeante et membres clés",
+        "ceo": {
+          "name": "Mitsuki Asano",
+          "title": "PDG et Directeur représentant",
+          "role": "Responsabilités",
+          "responsibility1": "Stratégie globale et prise de décision finale",
+          "responsibility2": "Stratégie marketing, définition des objectifs, planification de campagnes et partenariats avec des influenceurs",
+          "responsibility3": "Négociations finales avec les clients (entreprises touristiques, collectivités locales, etc.)",
+          "responsibility4": "Direction générale et gestion de la qualité des projets de conseil",
+          "responsibility5": "Vision de la plateforme, direction et prise de décision sur la politique UI/UX"
+        },
+        "cto": {
+          "name": "Yuta Katayama",
+          "title": "Responsable du développement",
+          "role": "Responsabilités",
+          "responsibility1": "Développeur full-stack",
+          "responsibility2": "Expert en développement de systèmes d'IA et d'apprentissage automatique",
+          "responsibility3": "Conception de l'architecture technique de la plateforme",
+          "responsibility4": "Responsable de la protection des informations personnelles"
+        },
+        "operations": {
+          "name": "Hirowa Mitsuya",
+          "title": "Responsable des opérations",
+          "role": "Responsabilités",
+          "responsibility1": "Acquisition d'utilisateurs test via la communauté des étudiants internationaux",
+          "responsibility2": "Opérations globales incluant l'exécution des campagnes",
+          "responsibility3": "Recherche et documentation via la communauté des étudiants internationaux",
+          "responsibility4": "Support à l'exécution des projets de conseil (recherche sur le terrain, utilisation SNS/web, etc.)"
+        }
+      },
+      "history": {
+        "title": "Histoire",
+        "event1": {
+          "date": "Décembre 2024",
+          "description": "Concept d'entreprise et étude de marché initiés"
+        },
+        "event2": {
+          "date": "Mai 2025",
+          "description": "Lancement du site web de l'entreprise"
+        },
+        "event3": {
+          "date": "Juin 2025",
+          "description": "Enregistrement de l'entreprise terminé"
+        },
+        "event4": {
+          "date": "Juillet 2025",
+          "description": "Lancement des médias Tabinaka"
+        },
+        "event5": {
+          "date": "Juillet 2025",
+          "description": "Financement reçu d'EV"
+        },
+        "event6": {
+          "date": "Hiver 2025",
+          "description": "Version bêta de la plateforme Gappy prévue"
+        }
+      },
+      "cta": {
+        "title": "N'hésitez pas à nous contacter",
+        "description": "N'hésitez pas à nous contacter pour des partenariats, la mise en œuvre de services ou toute autre demande."
+      }
+    },
+    "contactUs": {
+      "title": "Nous Contacter",
+      "subtitle": "N'hésitez pas à nous contacter pour des partenariats, la mise en œuvre de services ou toute autre demande. Nous répondrons rapidement.",
+      "form": {
+        "title": "Formulaire de contact",
+        "description": "Nous acceptons les demandes concernant nos produits et services ici. Après examen de votre demande, ",
+        "responseTime": "dans les 3 jours ouvrables",
+        "responseTimeEnd": ", notre représentant vous contactera.",
+        "basicInfo": "Informations de base",
+        "companyName": "Nom de l'entreprise",
+        "required": "*Obligatoire",
+        "companyPlaceholder": "ex : Gappy Inc.",
+        "contactName": "Personne de contact",
+        "namePlaceholder": "ex : Jean Dupont",
+        "email": "Adresse email",
+        "emailPlaceholder": "ex : info@example.com",
+        "phone": "Numéro de téléphone",
+        "optional": "Facultatif",
+        "phonePlaceholder": "ex : 03-1234-5678",
+        "inquiryDetails": "Détails de la demande",
+        "inquiryType": "Type de demande",
+        "selectType": "Veuillez sélectionner",
+        "type1": "À propos du conseil en tourisme entrant",
+        "type2": "À propos du programme de testeurs anticipés Gappy",
+        "type3": "À propos des partenariats/investissements",
+        "type4": "À propos du recrutement",
+        "type5": "Autres demandes",
+        "message": "Détails de la demande",
+        "messagePlaceholder": "Veuillez fournir des détails sur vos questions ou consultation.\nSi vous avez plusieurs points, les puces sont appréciées.",
+        "privacyPolicy": " et accepte le traitement des informations personnelles",
+        "privacyPolicyLink": "Politique de confidentialité",
+        "submit": "Passer à la confirmation",
+        "charactersCount": "caractères"
+      },
+      "otherMethods": {
+        "title": "Autres méthodes de contact",
+        "phone": {
+          "title": "Contact par téléphone",
+          "description": "Pour les demandes urgentes, veuillez nous contacter par téléphone. Disponible les jours ouvrables de 9h00 à 18h00.",
+          "number": "070-1185-3131"
+        },
+        "email": {
+          "title": "Contact par email",
+          "description": "Pour les demandes non urgentes, veuillez nous contacter par email. Disponible 24h/24.",
+          "address": "mitsuki@gappy.jp"
+        }
+      },
+      "companyInfo": {
+        "title": "Informations sur l'entreprise",
+        "basic": {
+          "title": "Informations de base",
+          "companyName": "Entreprise : Gappy Inc.",
+          "president": "Président : Mitsuki Asano",
+          "business": "Activité : Développement et fourniture de solutions de tourisme entrant"
+        },
+        "location": {
+          "title": "Emplacement et contact",
+          "address": "Adresse : ",
+          "postalCode": "〒150-0043",
+          "addressLine1": "1-10-8 Dogenzaka, Shibuya-ku, Tokyo",
+          "addressLine2": "Shibuya Dogenzaka Tokyu Building 3F",
+          "phone": "Téléphone : ",
+          "email": "Email : "
+        }
+      }
+    }
+  }
+} 

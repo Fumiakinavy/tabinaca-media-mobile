@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop, feature/*]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint-type-build:
+    name: Lint → 型チェック → ビルド
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. リポジトリをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Node.js をセットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # 3. 依存関係インストール
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. ESLint + Prettier チェック
+      - name: Run ESLint
+        run: npm run lint
+
+      # 5. TypeScript 型チェック
+      - name: TypeScript 型チェック
+        run: npm run type-check
+
+      # 6 Next.js ビルド検証
+      - name: Next.js Build
+        run: npm run build
+        env:
+          NODE_ENV: production
+          CI: "true"
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          NEXT_PUBLIC_BASE_URL: ${{ secrets.SITE_URL }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL }}
+          ACCOUNT_TOKEN_SECRET: ${{ secrets.ACCOUNT_TOKEN_SECRET || 'dummy-account-secret' }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || 'dummy-service-role' }}
+          GOOGLE_PLACES_API_KEY_SERVER: ${{ secrets.GOOGLE_PLACES_API_KEY_SERVER || 'dummy-places-server' }}
+          CORS_ORIGIN: https://gappytravel.com
+          ALLOWED_ORIGINS: https://gappytravel.com,https://www.gappytravel.com
+
+      # 7. ビルド成果物の保存（オプション）
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .next/
+          retention-days: 7
+
+  docker-build-args-check:
+    name: 🐳 Docker build (build-args required)
+    runs-on: ubuntu-latest
+    needs: [lint-type-build]
+    if: ${{ secrets.SUPABASE_URL != '' && secrets.SUPABASE_ANON_KEY != '' && secrets.SITE_URL != '' && secrets.GOOGLE_MAPS_API_KEY != '' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Docker build with required args
+        run: |
+          docker build \
+            --platform linux/amd64 \
+            --file Dockerfile \
+            --build-arg CI=true \
+            --build-arg NEXT_PUBLIC_SUPABASE_URL="${{ secrets.SUPABASE_URL }}" \
+            --build-arg NEXT_PUBLIC_SUPABASE_ANON_KEY="${{ secrets.SUPABASE_ANON_KEY }}" \
+            --build-arg NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="${{ secrets.GOOGLE_MAPS_API_KEY }}" \
+            --build-arg NEXT_PUBLIC_BASE_URL="${{ secrets.SITE_URL }}" \
+            --build-arg NEXT_PUBLIC_SITE_URL="${{ secrets.SITE_URL }}" \
+            -t tabinaka-media-ci:latest .

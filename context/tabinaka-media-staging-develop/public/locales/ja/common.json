@@ -1,0 +1,426 @@
+{
+  "header": {
+    "home": "ホーム",
+    "articles": "記事",
+    "experiences": "体験",
+    "events": "イベント",
+    "chat": "Gappy chat"
+  },
+  "breadcrumbs": {
+    "home": "ホーム",
+    "articles": "記事",
+    "experiences": "体験",
+    "events": "イベント"
+  },
+  "hero": {
+    "title": "渋谷で迷子？",
+    "subtitle": "最高のギャップタイムを見つけよう",
+    "description": "渋谷で1時間の空き時間ができた？ユニークな地元体験を即座に発見・予約しましょう。ただ時間を潰すのではなく、忘れられない思い出にしませんか。",
+    "findGaptime": "ギャップタイムを探す",
+    "learnMore": "詳しく見る",
+    "instantBooking": "即座予約",
+    "exclusiveCoupons": "限定クーポン",
+    "localGuides": "地元ガイド",
+    "scrollToExplore": "スクロールして探索"
+  },
+  "howToGappy": {
+    "title": "Gappyの使い方",
+    "step1": {
+      "title": "旅行動機を選ぶ",
+      "description": "あなたの気分や興味に合った体験の種類を選択してください"
+    },
+    "step2": {
+      "title": "お気に入りのギャップタイムを見つける",
+      "description": "利用可能な時間にぴったり合うアクティビティを発見してください"
+    },
+    "step3": {
+      "title": "クーポンを取得するか予約しよう！",
+      "description": "限定特典を確保するか、選択した体験を即座に予約してください"
+    }
+  },
+  "articles": {
+    "title": "記事",
+    "subtitle": "渋谷の隠れた宝石と自由時間のためのインサイダー情報を発見しましょう。",
+    "viewAll": "すべて見る",
+    "readTime": "分で読める",
+    "noArticles": "記事がありません"
+  },
+  "experiences": {
+    "title": "体験",
+    "subtitle": "厳選された渋谷のアクティビティを専用クーポンと地元ガイドと共にお楽しみください。",
+    "viewAll": "すべて見る",
+    "chooseMotivation": "旅行動機を選んでください",
+    "noExperiences": "体験がありません",
+    "chooseYourMotivation": "旅行動機を選ぼう",
+    "findPerfectActivity": "あなたの旅行に最適なアクティビティを見つけよう",
+    "whatKindOfExperience": "どんな体験をお探しですか？",
+    "searchPlaceholder": "体験を検索（例：ラーメン、サウナ、アート）",
+    "selectMotivationDescription": "旅行動機を選択して、あなたの興味に合った厳選された体験を発見し、渋谷で忘れられない思い出を作りましょう。",
+    "explore": "探索",
+    "whyChooseMotivation": "なぜ動機別に選ぶのか？",
+    "motivationBenefits": "私たちの動機ベースのアプローチは、あなたの旅行目標に本当に響く体験を見つけ、意味のある思い出を作るのに役立ちます。",
+    "personalized": "パーソナライズ",
+    "personalizedDesc": "あなたの特定の興味と旅行目標に合った体験を見つけましょう",
+    "curated": "厳選",
+    "curatedDesc": "本格的な地元体験を提供する厳選された体験",
+    "memorable": "思い出作り",
+    "memorableDesc": "あなたにとって本当に大切な体験で永続的な思い出を作りましょう"
+  },
+  "events": {
+    "title": "イベント",
+    "subtitle": "今後の渋谷フェスティバル、季節のお祝い、特別イベント。",
+    "viewAll": "すべて見る",
+    "noEvents": "イベントがありません"
+  },
+  "motivations": {
+    "shopCraft": "ショップ＆クラフト",
+    "familyTime": "ファミリータイム",
+    "moveAdventure": "アクティブ＆アドベンチャー",
+    "relaxRecharge": "リラックス＆リチャージ",
+    "cultureHeritage": "文化＆伝統",
+    "strollObserve": "散策＆観察",
+    "tasteLocal": "地元グルメ",
+    "featuredActivities": "注目の体験",
+    "totalExperiences": "{{count}}件の体験",
+    "shopCraftDesc": "ユニークなクラフトやショッピング体験を作り出し、発見しましょう",
+    "familyTimeDesc": "渋谷で愛する人たちと忘れられない思い出を作りましょう",
+    "moveAdventureDesc": "東京のダイナミックな中心でスリリングな冒険を発見しましょう",
+    "relaxRechargeDesc": "賑やかな渋谷の中心で完璧な逃避先を見つけましょう",
+    "cultureHeritageDesc": "本格的な日本文化と伝統に没頭しましょう",
+    "strollObserveDesc": "渋谷の街並みをゆっくりと散策し、地元の生活を観察しましょう",
+    "tasteLocalDesc": "地元の味と食文化を体験して、渋谷のグルメシーンを楽しみましょう"
+  },
+  "buttons": {
+    "submit": "送信",
+    "send": "送信",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "readMore": "続きを読む",
+    "bookNow": "今すぐ予約",
+    "loadMore": "もっと見る"
+  },
+  "quizResultModal": {
+    "diagnosisLabel": "16タイプ診断結果",
+    "currentType": "現在のタイプ",
+    "goChat": "Gappyチャットへ",
+    "editQuiz": "診断を編集",
+    "shareCard": "カードをシェア",
+    "viewExperiences": "体験を見る",
+    "signOut": "サインアウト",
+    "noResultHeroTitle": "まだ診断結果はありません",
+    "noResultHeroDescription": "クイズに答えて、一人ひとりに合ったおすすめを受け取りましょう。",
+    "noResultBodyTitle": "あなたの旅のスタイルを教えてください",
+    "noResultBodyDescription": "クイズを完了すると、Gappyチャットや体験がおすすめされます。",
+    "goQuiz": "クイズを受ける",
+    "closeResultsAria": "結果を閉じる",
+    "closeAria": "閉じる"
+  },
+  "shareCard": {
+    "pageTitle": "{{code}} | シェアカード",
+    "shareLink": "共有リンク",
+    "copyLink": "コピー",
+    "shareX": "Xでシェア",
+    "shareXImage": "Share on X",
+    "shareInstagram": "Share on Instagram",
+    "shareSheet": "Instagram/シェアシート",
+    "downloadImage": "画像をダウンロード",
+    "copyImage": "画像をコピー",
+    "downloading": "生成中...",
+    "copying": "コピー中...",
+    "noteInstagram": "Instagramは画像保存後にアプリで投稿してください。",
+    "xImageCopied": "画像をクリップボードにコピーしました。Xの投稿画面で画像を貼り付けてください。",
+    "xImageDownloaded": "画像をダウンロードしました。Xの投稿画面で画像をアップロードしてください。"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "total": "合計"
+  },
+  "footer": {
+    "description": "日本での自由時間を最大限に活用するための特別な体験とイベントを発見しましょう。",
+    "sections": {
+      "services": "サービス",
+      "support": "サポート",
+      "company": "会社"
+    },
+    "links": {
+      "articles": "記事",
+      "experiences": "体験",
+      "events": "イベント",
+      "faq": "よくある質問",
+      "contact": "お問い合わせ",
+      "help": "ヘルプ",
+      "about": "会社概要",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "cookies": "クッキーポリシー"
+    },
+    "copyright": "すべての権利を保有しています。",
+    "backToTop": "トップに戻る"
+  },
+  "pages": {
+    "article": {
+      "pageTitle": "| Gappy記事",
+      "relatedArticles": "関連記事",
+      "shareThisArticle": "この記事をシェア",
+      "backToArticles": "記事一覧に戻る"
+    },
+    "experience": {
+      "pageTitle": "| Gappy体験",
+      "getExclusiveCoupon": "限定クーポンを取得",
+      "getCouponDescription": "この体験の特別割引クーポンを受け取り、日本でのさらなる素晴らしいアクティビティを発見しましょう！",
+      "locationAccess": "場所・アクセス",
+      "locationDescription": "下記のインタラクティブマップで簡単に場所を確認できます。場所をチェックして訪問を計画しましょう！",
+      "address": "住所",
+      "relatedExperiences": "関連体験",
+      "backToExperiences": "体験一覧に戻る",
+      "bookNow": "今すぐ予約",
+      "getCoupon": "クーポンを取得",
+      "duration": "所要時間",
+      "level": "レベル",
+      "price": "料金",
+      "maxParticipants": "最大参加者数",
+      "included": "含まれるもの",
+      "requirements": "必要事項",
+      "priceFrom": "料金："
+    },
+    "couponForm": {
+      "title": "限定クーポンを取得",
+      "description": "今すぐ登録してこの体験の特別割引クーポンを受け取り、日本でのさらなる素晴らしいアクティビティを発見しましょう！",
+      "email": "メールアドレス",
+      "name": "お名前",
+      "phone": "電話番号",
+      "submit": "クーポンを送信",
+      "success": "クーポンがメールで送信されました！",
+      "error": "エラーが発生しました。もう一度お試しください。",
+      "enterEmail": "メールアドレスを入力してください",
+      "enterName": "お名前を入力してください",
+      "sending": "送信中..."
+    },
+    "terms": {
+      "title": "利用規約",
+      "lastUpdated": "最終更新日",
+      "agreement": {
+        "title": "利用規約への同意",
+        "content": "当ウェブサイトおよびサービスをご利用いただくことで、これらの利用規約に拘束されることに同意したものとみなされます。これらの利用規約に同意されない場合は、ウェブサイトまたはサービスをご利用いただけません。"
+      },
+      "couponService": {
+        "title": "クーポンサービス",
+        "content": "当ウェブサイトは様々な体験のクーポンを提供しています。これらのクーポンは、各体験提供者の利用規約の対象となります。クーポンの使用または体験自体から生じる問題について、当社は責任を負いません。"
+      },
+      "intellectualProperty": {
+        "title": "知的財産権",
+        "content": "当ウェブサイトのコンテンツ（テキスト、グラフィック、ロゴ、画像を含む）は、当社または当社のライセンサーの財産であり、著作権およびその他の知的財産法によって保護されています。"
+      },
+      "limitationOfLiability": {
+        "title": "責任の制限",
+        "content": "いかなる場合においても、当社は間接的、偶発的、特別、結果的または懲罰的損害（利益、データ、使用、信用またはその他の無形損失の損失を含むがこれらに限定されない）について責任を負いません。これには以下が含まれます：(i) サービスのアクセスまたは使用、またはアクセスまたは使用の不能；(ii) サービス上の第三者による行為またはコンテンツ；(iii) サービスから取得したコンテンツ；(iv) あなたの送信またはコンテンツの不正アクセス、使用または変更。これらは保証、契約、不法行為（過失を含む）またはその他の法的理論に基づくものであり、当社がそのような損害の可能性について通知されているかどうかに関係なく、また本規約に定められた救済措置がその本質的目的を果たすことができなかったことが判明した場合でも適用されます。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "これらの利用規約についてご質問がございましたら、以下までお問い合わせください"
+      }
+    },
+    "privacy": {
+      "title": "プライバシーポリシー",
+      "lastUpdated": "最終更新日",
+      "introduction": {
+        "title": "はじめに",
+        "content": "Gappyへようこそ！当社はお客様のプライバシーを保護することにコミットしています。このプライバシーポリシーは、当ウェブサイトおよびサービスをご利用いただく際に、当社がお客様の情報をどのように収集、使用、開示、保護するかを説明しています。このプライバシーポリシーを注意深くお読みください。このプライバシーポリシーの条件に同意されない場合は、サイトにアクセスしないでください。"
+      },
+      "informationCollection": {
+        "title": "収集する情報",
+        "description": "当社は様々な方法でお客様に関する情報を収集する場合があります。サイトで収集する可能性のある情報には以下が含まれます：",
+        "personalData": {
+          "title": "個人データ",
+          "content": "お客様がクーポンに登録する際やサイトとやり取りする際に自発的に提供する、お名前、メールアドレス、人口統計情報（年齢や国籍など）などの個人を特定できる情報。"
+        },
+        "derivativeData": {
+          "title": "派生データ",
+          "content": "サイトにアクセスする際に当社のサーバーが自動的に収集する情報。IPアドレス、ブラウザの種類、オペレーティングシステム、アクセス時間、サイトにアクセスする直前および直後に閲覧したページなど。"
+        }
+      },
+      "useOfInformation": {
+        "title": "情報の使用",
+        "description": "お客様に関する正確な情報を持つことで、当社はスムーズで効率的でカスタマイズされた体験を提供できます。具体的には、サイトを通じて収集したお客様に関する情報を以下に使用する場合があります：",
+        "emailCoupon": "リクエストされたクーポンをメールで送信",
+        "createAccount": "アカウントの作成と管理",
+        "statisticalData": "内部使用のための匿名統計データと分析の作成",
+        "efficiency": "サイトの効率性と運用の向上",
+        "monitorUsage": "使用状況とトレンドの監視と分析によるサイトでの体験の向上"
+      },
+      "disclosure": {
+        "title": "情報の開示",
+        "description": "当社は特定の状況でお客様に関する収集した情報を共有する場合があります。お客様の情報は以下のように開示される場合があります：",
+        "byLaw": {
+          "title": "法律による開示または権利保護",
+          "content": "お客様に関する情報の開示が法的手続きに対応するため、当社のポリシーの潜在的な違反を調査または修正するため、または他の者の権利、財産、安全を保護するために必要であると当社が信じる場合、当社は適用される法律、規則、または規制によって許可または要求される範囲でお客様の情報を共有する場合があります。"
+        },
+        "thirdParty": {
+          "title": "第三者サービスプロバイダー",
+          "content": "当社は、データ分析、メール配信、ホスティングサービス、カスタマーサービスを含む、当社のためにまたは当社に代わってサービスを実行する第三者とお客様の情報を共有する場合があります。"
+        }
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "content": "このプライバシーポリシーについてご質問やご意見がございましたら、以下までお問い合わせください"
+      }
+    },
+    "about": {
+      "title": "会社概要",
+      "subtitle": "株式会社Gappyは、旅行者の隙間時間を価値ある体験に変える、革新的なソリューションを提供する企業です。",
+      "companyInfo": {
+        "title": "Company Information",
+        "companyName": "会社名",
+        "companyNameValue": "株式会社Gappy",
+        "englishName": "英文社名",
+        "englishNameValue": "Gappy Inc.",
+        "capital": "資本金",
+        "capitalValue": "400万円",
+        "president": "代表取締役",
+        "presidentValue": "浅野 充輝",
+        "address": "所在地",
+        "addressValue": "〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル3F",
+        "business": "事業内容",
+        "businessValue1": "インバウンド観光事業者向けコンサルティング",
+        "businessValue2": "旅行体験マッチングプラットフォーム運営",
+        "businessValue3": "タビナカメディア運営",
+        "employees": "従業員数",
+        "employeesValue": "3名",
+        "contact": "連絡先",
+        "tel": "TEL",
+        "email": "E-mail",
+        "website": "Webサイト"
+      },
+      "team": {
+        "title": "役員・主要メンバー",
+        "ceo": {
+          "name": "浅野 充輝",
+          "title": "代表取締役CEO",
+          "role": "役割",
+          "responsibility1": "全体方針決定・最終判断",
+          "responsibility2": "マーケ戦略、ターゲット設定・キャンペーン企画・インフルエンサー連携",
+          "responsibility3": "クライアント（観光事業者や自治体等）との最終交渉",
+          "responsibility4": "コンサルプロジェクトの全体方針・納品クオリティ管理",
+          "responsibility5": "プラットフォームの方向性・ビジョン・UI/UX方針などの最終意思決定"
+        },
+        "cto": {
+          "name": "片山 雄太",
+          "title": "開発責任者",
+          "role": "役割",
+          "responsibility1": "フルスタック開発者",
+          "responsibility2": "AI・機械学習システム開発の専門家",
+          "responsibility3": "プラットフォーム技術アーキテクチャ設計",
+          "responsibility4": "個人情報保護管理責任者"
+        },
+        "operations": {
+          "name": "三ツ谷 寛羽",
+          "title": "オペレーション責任者",
+          "role": "役割",
+          "responsibility1": "留学生コミュニティを通じたテストユーザー集客",
+          "responsibility2": "キャンペーン実施などのオペレーション全般",
+          "responsibility3": "留学生コミュニティへの聞き込み調査・資料化",
+          "responsibility4": "コンサル施策の実行サポート（現地調査、SNS・ウェブ活用等）"
+        }
+      },
+      "history": {
+        "title": "沿革",
+        "event1": {
+          "date": "2024年12月",
+          "description": "事業構想・市場調査開始"
+        },
+        "event2": {
+          "date": "2025年5月",
+          "description": "会社HPローンチ"
+        },
+        "event3": {
+          "date": "2025年6月",
+          "description": "法人登記完了"
+        },
+        "event4": {
+          "date": "2025年7月",
+          "description": "タビナカメディアローンチ"
+        },
+        "event5": {
+          "date": "2025年7月",
+          "description": "EV様より資金調達"
+        },
+        "event6": {
+          "date": "2025年冬",
+          "description": "Gappyプラットフォーム β版リリース予定"
+        }
+      },
+      "cta": {
+        "title": "お気軽にお問い合わせください",
+        "description": "パートナーシップ、サービス導入、その他ご質問など、何でもお気軽にご相談ください。"
+      }
+    },
+    "contactUs": {
+      "title": "お問い合わせ",
+      "subtitle": "パートナーシップ、サービス導入、その他ご質問など、何でもお気軽にお問い合わせください。迅速に対応いたします。",
+      "form": {
+        "title": "お問い合わせフォーム",
+        "description": "製品・サービスに関するご質問やご相談はこちらから承ります。内容を確認後、",
+        "responseTime": "3営業日以内",
+        "responseTimeEnd": "に担当者よりご連絡いたします。",
+        "basicInfo": "基本情報",
+        "companyName": "事業者名・会社名",
+        "required": "*必須",
+        "companyPlaceholder": "例：株式会社Gappy",
+        "contactName": "ご担当者名",
+        "namePlaceholder": "例：田中 太郎",
+        "email": "メールアドレス",
+        "emailPlaceholder": "例：info@example.com",
+        "phone": "電話番号",
+        "optional": "任意",
+        "phonePlaceholder": "例：03-1234-5678",
+        "inquiryDetails": "お問い合わせ内容",
+        "inquiryType": "お問い合わせ種別",
+        "selectType": "選択してください",
+        "type1": "インバウンドコンサルティングについて",
+        "type2": "Gappyプラットフォーム早期テスターについて",
+        "type3": "パートナーシップ・投資について",
+        "type4": "採用について",
+        "type5": "その他のお問い合わせ",
+        "message": "お問い合わせ内容",
+        "messagePlaceholder": "ご質問やご相談内容を詳しくお聞かせください。\n複数項目がある場合は、箇条書きでご記入いただけますと幸いです。",
+        "privacyPolicy": "を確認し、個人情報の取り扱いに同意します",
+        "privacyPolicyLink": "プライバシーポリシー",
+        "submit": "確認画面へ",
+        "charactersCount": "文字"
+      },
+      "otherMethods": {
+        "title": "その他のお問い合わせ方法",
+        "phone": {
+          "title": "お電話でのお問い合わせ",
+          "description": "お急ぎの場合は、お電話でお問い合わせください。平日 9:00-18:00 に対応しております。",
+          "number": "070-1185-3131"
+        },
+        "email": {
+          "title": "メールでのお問い合わせ",
+          "description": "お急ぎでない場合は、メールでお問い合わせください。24時間受付しております。",
+          "address": "mitsuki@gappy.jp"
+        }
+      },
+      "companyInfo": {
+        "title": "会社情報",
+        "basic": {
+          "title": "基本情報",
+          "companyName": "会社名：株式会社Gappy",
+          "president": "代表取締役：浅野 充輝",
+          "business": "事業内容：インバウンド観光事業者向けソリューション開発・提供"
+        },
+        "location": {
+          "title": "所在地・連絡先",
+          "address": "住所：",
+          "postalCode": "〒150-0043",
+          "addressLine1": "東京都渋谷区道玄坂1丁目10番8号",
+          "addressLine2": "渋谷道玄坂東急ビル3F",
+          "phone": "電話：",
+          "email": "メール："
+        }
+      }
+    }
+  }
+}

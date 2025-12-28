@@ -1,0 +1,66 @@
+# ===========================================
+# AWS App Runner 設定ファイル
+# ===========================================
+# このファイルはApp Runnerのソースベースデプロイ時に使用されます
+# ECRイメージを使用する場合は、このファイルは不要です
+#
+# 重要: NEXT_PUBLIC_ で始まる環境変数はビルド時に必要です
+# App Runner Console で「ビルド時環境変数」として設定してください
+
+version: 1.0
+runtime: nodejs18
+
+build:
+  commands:
+    pre-build:
+      - echo "Installing dependencies..."
+    build:
+      - npm ci
+      - npm run build
+    post-build:
+      - echo "Build completed!"
+  # ビルド時環境変数（NEXT_PUBLIC_ で始まる変数はビルド時に必要）
+  env:
+    - name: NODE_ENV
+      value: "production"
+    - name: NEXT_PUBLIC_SUPABASE_URL
+      value: "https://oqsaxmixaglwjugyqknk.supabase.co"
+    - name: NEXT_PUBLIC_SUPABASE_ANON_KEY
+      value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xc2F4bWl4YWdsd2p1Z3lxa25rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4MzcyNjcsImV4cCI6MjA3NjQxMzI2N30.-_8typNuXHaSX1qzXP_UrX5PQk8k7YmSJrm8lEufsQY"
+    - name: NEXT_PUBLIC_SITE_URL
+      value: "https://gappytravel.com"
+    - name: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+      value: "AIzaSyBGp-zgrHZm0yD8LJH1wsqzd1w-ixGHce4"
+    - name: NEXT_PUBLIC_BASE_URL
+      value: "https://gappytravel.com"
+
+run:
+  command: node .next/standalone/server.js
+  network:
+    port: 8080
+    env: PORT
+  env:
+    - name: NODE_ENV
+      value: "production"
+    - name: PORT
+      value: "8080"
+    # 以下の環境変数はApp Runnerコンソールまたは
+    # AWS Secrets Managerで設定してください
+    # 
+    # 重要: NEXT_PUBLIC_ で始まる環境変数はビルド時に必要です
+    # App Runnerコンソールで設定した環境変数はビルド時にも利用可能です
+    # 
+    # 必須環境変数:
+    # - name: NEXT_PUBLIC_SUPABASE_URL
+    # - name: NEXT_PUBLIC_SUPABASE_ANON_KEY
+    # - name: SUPABASE_SERVICE_ROLE_KEY
+    # - name: ACCOUNT_TOKEN_SECRET
+    # 
+    # 推奨環境変数:
+    # - name: CORS_ORIGIN
+    # - name: ALLOWED_ORIGINS
+    # - name: GOOGLE_PLACES_API_KEY_SERVER
+    # - name: NEXT_PUBLIC_BASE_URL
+    # - name: NEXT_PUBLIC_SITE_URL
+
+  

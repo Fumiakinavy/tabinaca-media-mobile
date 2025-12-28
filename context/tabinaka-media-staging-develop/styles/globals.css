@@ -1,0 +1,749 @@
+/* @import rules must come before all other rules except @charset and @layer */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* モバイル最適化のベース設定 */
+@layer base {
+  /* iOS Safari の bounce 効果を無効化 */
+  html {
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* モバイルデバイスでの viewport 設定 */
+  @supports (-webkit-touch-callout: none) {
+    html {
+      height: -webkit-fill-available;
+    }
+  }
+
+  body {
+    height: 100%;
+    min-height: -webkit-fill-available;
+    /* 入力エリアが画面下で切れないよう全体スクロールを許可 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* タッチ操作の最適化 */
+    touch-action: manipulation;
+    /* iOS のタップハイライトを無効化 */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #__next {
+    min-height: 100%;
+    overscroll-behavior-y: none;
+  }
+
+  /* フォーカス状態の改善（キーボードナビゲーション用） */
+  .focus-visible:focus {
+    outline: 2px solid #36d879;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* モバイルでのテキスト選択最適化 */
+  * {
+    -webkit-touch-callout: none;
+    /* デフォルトの選択挙動を維持（入力フォーカス阻害を防ぐ） */
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+}
+
+/* カスタムユーティリティクラス */
+.uppercase-all {
+  text-transform: uppercase;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+/* 旅行動機別ページのヒーローセクション文字色強制設定 */
+.motivation-hero h1,
+.motivation-hero h2,
+.motivation-hero h3,
+.motivation-hero p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+/* PageHeroコンポーネントの文字色強制設定 */
+section[class*="relative w-full"] h1,
+section[class*="relative w-full"] p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+/* 旅行動機別ページのヒーローセクション文字色最強制設定 */
+.motivation-hero h1,
+.motivation-hero h2,
+.motivation-hero h3,
+.motivation-hero p,
+section.motivation-hero h1,
+section.motivation-hero h2,
+section.motivation-hero h3,
+section.motivation-hero p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* 特定のクラス名に対する強制設定 */
+.motivation-hero-title,
+.motivation-hero-subtitle {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* すべてのh1、h2、p要素に対する強制設定（旅行動機別ページ内） */
+.motivation-hero h1,
+.motivation-hero h2,
+.motivation-hero h3,
+.motivation-hero p,
+.motivation-hero-title,
+.motivation-hero-subtitle {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  -webkit-text-fill-color: white !important;
+  font-weight: bold !important;
+}
+
+/* Tailwind CSSの文字色クラスを上書き */
+.motivation-hero h1.text-gray-900,
+.motivation-hero h1.text-black,
+.motivation-hero h2.text-gray-900,
+.motivation-hero h2.text-black,
+.motivation-hero h3.text-gray-900,
+.motivation-hero h3.text-black,
+.motivation-hero p.text-gray-900,
+.motivation-hero p.text-black {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* 最高優先度のセレクタ */
+html body .motivation-hero h1,
+html body .motivation-hero h2,
+html body .motivation-hero h3,
+html body .motivation-hero p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* 旅行動機別ページの直接ヒーローセクション用スタイル - 削除済み */
+/* このスタイルはすべてのmain.containerに影響するため削除しました */
+/* 旅行動機別ページでは.motivation-heroクラスを使用してください */
+
+/* ヒーローセクションのスタイルを無効化するクラス - 最高優先度 */
+.no-hero-styles h1,
+.no-hero-styles h2,
+.no-hero-styles h3,
+.no-hero-styles p {
+  color: inherit !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* さらに強力なセレクタでno-hero-stylesを保護 */
+html body .no-hero-styles h1,
+html body .no-hero-styles h2,
+html body .no-hero-styles h3,
+html body .no-hero-styles p {
+  color: inherit !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* フィルターメッセージ用の専用スタイル - 最高優先度 */
+.filter-message-container .filter-message-title,
+.filter-message-container .filter-message-text {
+  color: black !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: black !important;
+}
+
+html body .filter-message-container .filter-message-title,
+html body .filter-message-container .filter-message-text {
+  color: black !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: black !important;
+}
+
+/* 特定のセクション内の文字色強制設定 */
+section[class*="relative w-full"] h1,
+section[class*="relative w-full"] h2,
+section[class*="relative w-full"] h3,
+section[class*="relative w-full"] p {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  -webkit-text-fill-color: white !important;
+}
+
+
+
+/* スクロールバー非表示 */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* モバイル最適化のタッチターゲット */
+@layer components {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .touch-target-lg {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* モバイル最適化されたボタン */
+  .btn-mobile {
+    @apply touch-target px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply active:scale-95 active:bg-opacity-80;
+  }
+
+  .btn-mobile-primary {
+    @apply btn-mobile bg-primary-500 text-white hover:bg-primary-600;
+  }
+
+  .btn-mobile-secondary {
+    @apply btn-mobile bg-gray-100 text-gray-900 hover:bg-gray-200;
+  }
+
+  /* モバイル最適化されたカード */
+  .card-mobile {
+    @apply bg-white rounded-xl shadow-sm ring-1 ring-gray-300 outline outline-1 outline-gray-300;
+    @apply hover:ring-gray-400 hover:outline-gray-400 hover:shadow-md transition-shadow duration-200;
+    @apply active:scale-[0.98] active:shadow-sm;
+  }
+
+  /* モバイル最適化されたナビゲーション */
+  .nav-mobile {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200;
+    @apply pb-safe-bottom;
+    z-index: 50;
+  }
+
+  /* モバイル最適化されたヘッダー */
+  .header-mobile {
+    @apply fixed top-0 left-0 right-0 bg-white shadow-sm;
+    @apply pt-safe-top;
+    z-index: 50;
+  }
+
+  /* 区切り線ユーティリティ（列数別） */
+  .grid-dividers-2 > * {
+    border-top: 1px solid #e5e7eb; /* neutral-200 */
+    border-left: 1px solid #e5e7eb;
+  }
+  .grid-dividers-2 > *:nth-child(-n+2) {
+    border-top: 0;
+  }
+  .grid-dividers-2 > *:nth-child(2n + 1) {
+    border-left: 0;
+  }
+
+  .grid-dividers-3 > * {
+    border-top: 1px solid #e5e7eb;
+    border-left: 1px solid #e5e7eb;
+  }
+  .grid-dividers-3 > *:nth-child(-n+3) {
+    border-top: 0;
+  }
+  .grid-dividers-3 > *:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  .grid-dividers-4 > * {
+    border-top: 1px solid #e5e7eb;
+    border-left: 1px solid #e5e7eb;
+  }
+  .grid-dividers-4 > *:nth-child(-n+4) {
+    border-top: 0;
+  }
+  .grid-dividers-4 > *:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  /* モバイルヘッダーメニュー用の極細縁取り */
+  @media (max-width: 767px) {
+    .header-mobile-text-outline {
+      -webkit-text-stroke: 0.35px #000;
+      text-shadow:
+        -0.25px -0.25px 0 #000,
+        0.25px -0.25px 0 #000,
+        -0.25px 0.25px 0 #000,
+        0.25px 0.25px 0 #000;
+    }
+  }
+
+  /* スクロールバー非表示ユーティリティ */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* モバイルでは細いスクロールバー */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+/* MDXコンテンツのスタイリング */
+.mdx-content {
+  @apply prose prose-lg prose-gray max-w-none;
+}
+
+.mdx-content h1 {
+  @apply text-mobile-4xl md:text-3xl font-bold text-gray-900 mb-6;
+}
+
+.mdx-content h2 {
+  @apply text-mobile-3xl md:text-2xl font-semibold text-gray-800 mb-4 mt-8;
+}
+
+.mdx-content h3 {
+  @apply text-mobile-2xl md:text-xl font-medium text-gray-700 mb-3 mt-6;
+}
+
+.mdx-content p {
+  @apply text-mobile-base md:text-gray-600 mb-4 leading-relaxed;
+}
+
+.mdx-content ul,
+.mdx-content ol {
+  @apply mb-4 pl-6;
+}
+
+.mdx-content li {
+  @apply mb-2 text-mobile-base md:text-gray-600;
+}
+
+.mdx-content img {
+  @apply rounded-lg shadow-md mb-6 w-full h-auto;
+}
+
+.mdx-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic text-gray-700 bg-gray-50 py-2 my-6;
+}
+
+.mdx-content pre {
+  @apply bg-gray-800 text-white p-4 rounded-lg overflow-x-auto my-6;
+}
+
+.mdx-content code {
+  @apply bg-gray-100 text-primary px-1 py-0.5 rounded text-mobile-sm md:text-sm;
+}
+
+.mdx-content a {
+  @apply text-primary hover:underline;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInPlace {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+.animate-header-signed-out {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+.animate-header-signed-in {
+  animation: fadeInPlace 0.4s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Intersection Observer classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in-up.show,
+.fade-in-left.show,
+.fade-in-right.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button animations */
+.btn-primary {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(54, 216, 121, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Staggered animations - 遅延を削除して即座に表示 */
+.stagger-children > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.stagger-children.show > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page transitions */
+.page-transition {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.page-transition.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating animation */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Gradient animation */
+.gradient-animation {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text animations */
+.text-glow {
+  text-shadow: 0 0 20px rgba(54, 216, 121, 0.5);
+}
+
+.text-slide-up {
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.text-slide-up.show {
+  transform: translateY(0);
+}
+
+/* Responsive animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Swiper customizations */
+.swiper {
+  padding-bottom: 40px;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+
+
+
+
+
+
+/* Responsive adjustments for Swiper */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 4px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #36D879 !important;
+    transform: scale(1.2) !important;
+  }
+
+  .articles-swiper {
+    padding-bottom: 2rem !important;
+  }
+
+  .motivation-swiper {
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* PhoneInput カスタムスタイル */
+.PhoneInput {
+  @apply w-full;
+}
+
+.PhoneInputCountry {
+  @apply mr-2;
+}
+
+.PhoneInputCountrySelect {
+  @apply bg-transparent border-none outline-none text-sm;
+}
+
+.PhoneInputCountryIcon {
+  @apply w-5 h-4;
+}
+
+.PhoneInputInput {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white;
+}
+
+.PhoneInputInput:focus {
+  @apply border-blue-500 ring-2 ring-blue-500;
+}

@@ -1,0 +1,73 @@
+# ===========================================
+# Docker ビルド時に除外するファイル
+# ===========================================
+
+# 依存関係（Dockerでインストールするため）
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# ビルド成果物（Dockerでビルドするため）
+.next
+out
+
+# 環境変数ファイル（機密情報）
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Git関連
+.git
+.gitignore
+
+# IDE・エディタ
+.idea
+.vscode
+*.swp
+*.swo
+
+# テスト関連
+coverage
+.nyc_output
+tests
+__tests__
+
+# ドキュメント
+docs
+*.md
+!README.md
+
+# 開発用設定
+.eslintcache
+.prettierrc
+.prettierignore
+.editorconfig
+
+# その他
+*.log
+*.pid
+*.seed
+*.pid.lock
+.DS_Store
+Thumbs.db
+
+# Supabaseローカル
+supabase/.branches
+supabase/.temp
+
+# Wrangler (Cloudflare)
+.wrangler
+wrangler.toml
+
+# スクリプト（本番不要）
+scripts/
+tools/
+
+# PRD/設計書
+PR_DESCRIPTION.md
+AGENTS.md
+

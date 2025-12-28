@@ -1,0 +1,426 @@
+{
+  "header": {
+    "home": "首页",
+    "articles": "文章",
+    "experiences": "体验",
+    "events": "活动",
+    "chat": "Gappy chat"
+  },
+  "breadcrumbs": {
+    "home": "首页",
+    "articles": "文章",
+    "experiences": "体验",
+    "events": "活动"
+  },
+  "hero": {
+    "title": "在涩谷迷路了？",
+    "subtitle": "找到你最好的空隙时间",
+    "description": "在涩谷有一小时的空闲时间？立即发现并预订独特的本地体验。不要只是消磨时间——让它变得难忘。",
+    "findGaptime": "找到我的空隙时间",
+    "learnMore": "了解更多",
+    "instantBooking": "即时预订",
+    "exclusiveCoupons": "专属优惠券",
+    "localGuides": "本地向导",
+    "scrollToExplore": "滚动探索"
+  },
+  "howToGappy": {
+    "title": "如何使用Gappy？",
+    "step1": {
+      "title": "选择你的旅行动机",
+      "description": "选择符合你心情和兴趣的体验类型"
+    },
+    "step2": {
+      "title": "找到你最喜欢的空隙时间",
+      "description": "发现完全适合你可用时间的活动"
+    },
+    "step3": {
+      "title": "获取优惠券或预订！",
+      "description": "获得专属优惠或立即预订你选择的体验"
+    }
+  },
+  "articles": {
+    "title": "文章",
+    "subtitle": "发现涩谷的隐藏宝石和空闲时间的内幕消息。",
+    "viewAll": "查看全部",
+    "readTime": "分钟阅读",
+    "noArticles": "没有可用的文章"
+  },
+  "experiences": {
+    "title": "体验",
+    "subtitle": "精选的涩谷活动，配有专属优惠券和专业本地向导。",
+    "viewAll": "查看全部",
+    "chooseMotivation": "选择你的旅行动机",
+    "noExperiences": "没有可用的体验",
+    "chooseYourMotivation": "选择你的旅行动机",
+    "findPerfectActivity": "为你的旅行找到完美的活动",
+    "whatKindOfExperience": "你在寻找什么样的体验？",
+    "searchPlaceholder": "搜索体验（例如：拉面、桑拿、艺术）",
+    "selectMotivationDescription": "选择你的旅行动机，发现符合你兴趣的精选体验，在涩谷创造难忘的回忆。",
+    "explore": "探索",
+    "whyChooseMotivation": "为什么要按动机选择？",
+    "motivationBenefits": "我们基于动机的方法帮助你找到真正与你旅行目标产生共鸣的体验，创造有意义的回忆。",
+    "personalized": "个性化",
+    "personalizedDesc": "找到符合你特定兴趣和旅行目标的体验",
+    "curated": "精选",
+    "curatedDesc": "提供真实当地体验的精心挑选的活动",
+    "memorable": "难忘",
+    "memorableDesc": "通过真正重要的体验创造持久的回忆"
+  },
+  "events": {
+    "title": "活动",
+    "subtitle": "即将举行的涩谷节庆、季节庆祝活动和特别活动。",
+    "viewAll": "查看全部",
+    "noEvents": "没有可用的活动"
+  },
+  "motivations": {
+    "shopCraft": "购物与手工",
+    "familyTime": "家庭时光",
+    "moveAdventure": "运动与冒险",
+    "relaxRecharge": "放松与充电",
+    "cultureHeritage": "文化与传统",
+    "strollObserve": "漫步与观察",
+    "tasteLocal": "品尝当地美食",
+    "featuredActivities": "精选体验",
+    "totalExperiences": "共{{count}}项体验",
+    "shopCraftDesc": "创造和发现独特的手工艺品和购物体验",
+    "familyTimeDesc": "在涩谷与你的亲人创造难忘的回忆",
+    "moveAdventureDesc": "在东京充满活力的中心发现刺激的冒险",
+    "relaxRechargeDesc": "在繁华的涩谷中心找到你完美的逃离",
+    "cultureHeritageDesc": "沉浸在正宗的日本文化和传统中",
+    "strollObserveDesc": "悠闲地漫步在涩谷的街道上，观察当地生活",
+    "tasteLocalDesc": "体验当地美食和饮食文化，享受涩谷的美食风景"
+  },
+  "buttons": {
+    "submit": "提交",
+    "send": "发送",
+    "cancel": "取消",
+    "close": "关闭",
+    "readMore": "阅读更多",
+    "bookNow": "立即预订",
+    "loadMore": "加载更多"
+  },
+  "quizResultModal": {
+    "diagnosisLabel": "16类型诊断结果",
+    "currentType": "当前类型",
+    "goChat": "前往Gappy聊天",
+    "editQuiz": "在测验中编辑",
+    "shareCard": "分享卡片",
+    "viewExperiences": "查看体验",
+    "signOut": "登出",
+    "noResultHeroTitle": "尚未完成测验",
+    "noResultHeroDescription": "完成测验即可解锁个性化推荐。",
+    "noResultBodyTitle": "让体验更贴合你",
+    "noResultBodyDescription": "完成测验后，AI 聊天和体验内容将为你量身推荐。",
+    "goQuiz": "开始测验",
+    "closeResultsAria": "关闭结果",
+    "closeAria": "关闭"
+  },
+  "shareCard": {
+    "pageTitle": "{{code}} | 分享卡片",
+    "shareLink": "分享链接",
+    "copyLink": "复制",
+    "shareX": "在X上分享",
+    "shareXImage": "Share on X",
+    "shareInstagram": "Share on Instagram",
+    "shareSheet": "Instagram/分享面板",
+    "downloadImage": "下载图片",
+    "copyImage": "复制图片",
+    "downloading": "生成中...",
+    "copying": "复制中...",
+    "noteInstagram": "用于 Instagram，请先保存图片，再在应用中发布。",
+    "xImageCopied": "图片已复制到剪贴板。请在X的发布窗口中粘贴图片。",
+    "xImageDownloaded": "图片已下载。请在X的发布窗口中上传图片。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "total": "总计"
+  },
+  "footer": {
+    "description": "发现非凡的体验和活动，充分利用您在日本的空闲时间。",
+    "sections": {
+      "services": "服务",
+      "support": "支持",
+      "company": "公司"
+    },
+    "links": {
+      "articles": "文章",
+      "experiences": "体验",
+      "events": "活动",
+      "faq": "常见问题",
+      "contact": "联系我们",
+      "help": "帮助",
+      "about": "关于我们",
+      "terms": "服务条款",
+      "privacy": "隐私政策",
+      "cookies": "Cookie政策"
+    },
+    "copyright": "版权所有。",
+    "backToTop": "返回顶部"
+  },
+  "pages": {
+    "article": {
+      "pageTitle": "| Gappy文章",
+      "relatedArticles": "相关文章",
+      "shareThisArticle": "分享这篇文章",
+      "backToArticles": "返回文章列表"
+    },
+    "experience": {
+      "pageTitle": "| Gappy体验",
+      "getExclusiveCoupon": "获取专属优惠券",
+      "getCouponDescription": "立即注册以获取此体验的特别折扣优惠券，发现日本更多精彩活动！",
+      "locationAccess": "位置与交通",
+      "locationDescription": "通过下方的互动地图轻松找到我们。查看位置并计划您的访问！",
+      "address": "地址",
+      "relatedExperiences": "相关体验",
+      "backToExperiences": "返回体验列表",
+      "bookNow": "立即预订",
+      "getCoupon": "获取优惠券",
+      "duration": "持续时间",
+      "level": "难度等级",
+      "price": "价格",
+      "maxParticipants": "最大参与人数",
+      "included": "包含项目",
+      "requirements": "要求",
+      "priceFrom": "价格："
+    },
+    "couponForm": {
+      "title": "获取专属优惠券",
+      "description": "立即注册以获取此体验的特别折扣优惠券，发现日本更多精彩活动！",
+      "email": "电子邮箱",
+      "name": "您的姓名",
+      "phone": "电话号码",
+      "submit": "发送优惠券",
+      "success": "优惠券已发送到您的邮箱！",
+      "error": "发生错误，请重试。",
+      "enterEmail": "请输入您的电子邮箱",
+      "enterName": "请输入您的姓名",
+      "sending": "发送中..."
+    },
+    "terms": {
+      "title": "服务条款",
+      "lastUpdated": "最后更新",
+      "agreement": {
+        "title": "条款协议",
+        "content": "使用我们的网站和服务即表示您同意受这些服务条款的约束。如果您不同意这些条款，请勿使用我们的网站或服务。"
+      },
+      "couponService": {
+        "title": "优惠券服务",
+        "content": "我们的网站提供各种体验的优惠券。这些优惠券受各体验提供商条款和条件的约束。我们不对使用优惠券或体验本身产生的任何问题负责。"
+      },
+      "intellectualProperty": {
+        "title": "知识产权",
+        "content": "我们网站上的内容，包括文字、图形、标志和图像，是我们公司或我们许可方的财产，受版权和其他知识产权法的保护。"
+      },
+      "limitationOfLiability": {
+        "title": "责任限制",
+        "content": "在任何情况下，我们不对任何间接、偶然、特殊、后果性或惩罚性损害承担责任，包括但不限于利润、数据、使用、商誉或其他无形损失的损失。"
+      },
+      "contact": {
+        "title": "联系我们",
+        "content": "如果您对这些服务条款有任何疑问，请联系我们"
+      }
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "lastUpdated": "最后更新",
+      "introduction": {
+        "title": "简介",
+        "content": "欢迎来到Gappy！我们致力于保护您的隐私。本隐私政策解释了当您使用我们的网站和服务时，我们如何收集、使用、披露和保护您的信息。请仔细阅读本隐私政策。如果您不同意本隐私政策的条款，请勿访问本网站。"
+      },
+      "informationCollection": {
+        "title": "我们收集的信息",
+        "description": "我们可能通过各种方式收集您的信息。我们可能在网站上收集的信息包括：",
+        "personalData": {
+          "title": "个人数据",
+          "content": "您在注册优惠券或与网站互动时自愿提供的个人身份信息，如姓名、电子邮件地址和人口统计信息（如年龄和国籍）。"
+        },
+        "derivativeData": {
+          "title": "派生数据",
+          "content": "当您访问网站时我们的服务器自动收集的信息，如您的IP地址、浏览器类型、操作系统、访问时间以及您在访问网站之前和之后立即查看的页面。"
+        }
+      },
+      "useOfInformation": {
+        "title": "信息使用",
+        "description": "拥有准确的信息使我们能够为您提供顺畅、高效和定制的体验。具体而言，我们可能使用通过网站收集的信息来：",
+        "emailCoupon": "通过电子邮件发送所请求的优惠券",
+        "createAccount": "创建和管理您的账户",
+        "statisticalData": "生成供内部使用的匿名统计数据和分析",
+        "efficiency": "提高网站的效率和运营",
+        "monitorUsage": "监控和分析使用情况和趋势以改善您在网站上的体验"
+      },
+      "disclosure": {
+        "title": "信息披露",
+        "description": "在某些情况下，我们可能共享我们收集的关于您的信息。您的信息可能按以下方式披露：",
+        "byLaw": {
+          "title": "法律要求或保护权利",
+          "content": "如果我们认为有必要发布有关您的信息以响应法律程序，调查或纠正我们政策的潜在违规行为，或保护他人的权利、财产和安全，我们可能会在适用法律、规则或法规允许或要求的范围内共享您的信息。"
+        },
+        "thirdParty": {
+          "title": "第三方服务提供商",
+          "content": "我们可能与为我们执行服务的第三方共享您的信息，包括数据分析、电子邮件发送、托管服务和客户服务。"
+        }
+      },
+      "contact": {
+        "title": "联系我们",
+        "content": "如果您对本隐私政策有任何疑问或意见，请联系我们"
+      }
+    },
+    "about": {
+      "title": "关于我们",
+      "subtitle": "Gappy Inc.是一家将旅行者的空闲时间转化为有价值体验的创新公司。",
+      "companyInfo": {
+        "title": "公司信息",
+        "companyName": "公司名称",
+        "companyNameValue": "Gappy Inc.",
+        "englishName": "英文名称",
+        "englishNameValue": "Gappy Inc.",
+        "capital": "资本金",
+        "capitalValue": "400万日元",
+        "president": "代表取缔役",
+        "presidentValue": "浅野充辉",
+        "address": "地址",
+        "addressValue": "日本东京都�的谷区道玄坂1丁目10番8号 涩谷道玄坂东急大厦3F",
+        "business": "业务",
+        "businessValue1": "入境旅游咨询服务",
+        "businessValue2": "旅行体验匹配平台运营",
+        "businessValue3": "旅中媒体运营",
+        "employees": "员工人数",
+        "employeesValue": "3人",
+        "contact": "联系方式",
+        "tel": "电话",
+        "email": "邮箱",
+        "website": "网站"
+      },
+      "team": {
+        "title": "管理团队和核心成员",
+        "ceo": {
+          "name": "浅野充辉",
+          "title": "CEO兼代表取缔役",
+          "role": "职责",
+          "responsibility1": "整体战略和最终决策",
+          "responsibility2": "营销策略、目标设定、活动策划和网红合作",
+          "responsibility3": "与客户（旅游企业、地方政府等）的最终谈判",
+          "responsibility4": "咨询项目的整体方向和质量管理",
+          "responsibility5": "平台愿景、方向和UI/UX策略决策"
+        },
+        "cto": {
+          "name": "片山雄太",
+          "title": "开发负责人",
+          "role": "职责",
+          "responsibility1": "全栈开发工程师",
+          "responsibility2": "AI和机器学习系统开发专家",
+          "responsibility3": "平台技术架构设计",
+          "responsibility4": "个人信息保护管理负责人"
+        },
+        "operations": {
+          "name": "三�的�的宽羽",
+          "title": "运营负责人",
+          "role": "职责",
+          "responsibility1": "通过留学生社区获取测试用户",
+          "responsibility2": "包括活动执行在内的整体运营",
+          "responsibility3": "通过留学生社区进行研究和文档化",
+          "responsibility4": "咨询项目执行支持（实地调查、SNS/网络利用等）"
+        }
+      },
+      "history": {
+        "title": "发展历程",
+        "event1": {
+          "date": "2024年12月",
+          "description": "商业构想和市场调研启动"
+        },
+        "event2": {
+          "date": "2025年5月",
+          "description": "公司官网上线"
+        },
+        "event3": {
+          "date": "2025年6月",
+          "description": "公司注册完成"
+        },
+        "event4": {
+          "date": "2025年7月",
+          "description": "旅中媒体上线"
+        },
+        "event5": {
+          "date": "2025年7月",
+          "description": "获得EV融资"
+        },
+        "event6": {
+          "date": "2025年冬",
+          "description": "Gappy平台beta版发布计划"
+        }
+      },
+      "cta": {
+        "title": "欢迎联系我们",
+        "description": "如有合作、服务实施或其他咨询，请随时与我们联系。"
+      }
+    },
+    "contactUs": {
+      "title": "联系我们",
+      "subtitle": "如有合作、服务实施或其他咨询，请随时联系我们。我们将尽快回复。",
+      "form": {
+        "title": "联系表单",
+        "description": "我们在此接受产品和服务的咨询。审核后，",
+        "responseTime": "3个工作日内",
+        "responseTimeEnd": "我们的代表将与您联系。",
+        "basicInfo": "基本信息",
+        "companyName": "公司名称",
+        "required": "*必填",
+        "companyPlaceholder": "例：Gappy Inc.",
+        "contactName": "联系人",
+        "namePlaceholder": "例：田中太郎",
+        "email": "邮箱地址",
+        "emailPlaceholder": "例：info@example.com",
+        "phone": "电话号码",
+        "optional": "可选",
+        "phonePlaceholder": "例：03-1234-5678",
+        "inquiryDetails": "咨询详情",
+        "inquiryType": "咨询类型",
+        "selectType": "请选择",
+        "type1": "关于入境咨询",
+        "type2": "关于Gappy平台早期测试",
+        "type3": "关于合作/投资",
+        "type4": "关于招聘",
+        "type5": "其他咨询",
+        "message": "咨询内容",
+        "messagePlaceholder": "请详细描述您的问题或咨询。\n如有多个项目，欢迎使用项目符号列出。",
+        "privacyPolicy": "并同意个人信息处理",
+        "privacyPolicyLink": "隐私政策",
+        "submit": "进入确认页面",
+        "charactersCount": "字符"
+      },
+      "otherMethods": {
+        "title": "其他联系方式",
+        "phone": {
+          "title": "电话咨询",
+          "description": "如有紧急咨询，请电话联系我们。工作日9:00至18:00可用。",
+          "number": "070-1185-3131"
+        },
+        "email": {
+          "title": "邮件咨询",
+          "description": "如不紧急，请邮件联系我们。24小时可用。",
+          "address": "mitsuki@gappy.jp"
+        }
+      },
+      "companyInfo": {
+        "title": "公司信息",
+        "basic": {
+          "title": "基本信息",
+          "companyName": "公司：Gappy Inc.",
+          "president": "代表：浅野充辉",
+          "business": "业务：入境旅游解决方案开发和提供"
+        },
+        "location": {
+          "title": "地址和联系方式",
+          "address": "地址：",
+          "postalCode": "〒150-0043",
+          "addressLine1": "东京都涩谷区道玄坂1丁目10番8号",
+          "addressLine2": "涩谷道玄坂东急大厦3F",
+          "phone": "电话：",
+          "email": "邮箱："
+        }
+      }
+    }
+  }
+} 

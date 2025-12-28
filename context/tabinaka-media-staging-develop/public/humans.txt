@@ -1,0 +1,36 @@
+# Gappy - Discover Authentic Japanese Experiences in Shibuya
+
+## Team
+- Developers: Gappy Development Team
+- Designers: Gappy Design Team
+- Content: Gappy Content Team
+
+## Tech Stack
+- Framework: Next.js
+- Languages: TypeScript, JavaScript
+- Styling: Tailwind CSS
+- Database: Supabase
+- Image Optimization: Cloudinary
+- Analytics: Google Analytics 4
+
+## Contact
+- Website: https://gappytravel.com
+- Email: support@gappy.jp
+- Twitter: @DjMittzu
+- Instagram: @shibuya_gap_travel
+- Facebook: Gappy
+- TikTok: @kankankan0
+
+## Services
+- Kimono Dressing Experience
+- Goldfish Scooping
+- Sushi Making
+- Shibuya Sightseeing Tours
+- Gourmet Experiences
+- Japanese Cultural Experiences
+
+## Location
+Shibuya Ward, Tokyo, Japan
+
+## Last Updated
+December 19, 2024

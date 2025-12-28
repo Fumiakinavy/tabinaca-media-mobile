@@ -1,7 +1,7 @@
 # Site Overview: Gappy Tabinaka Media (Web)
 
 ## Purpose
-- A travel media + discovery web app focused on Shibuya, Tokyo.
+- A travel media + discovery web app.
 - Helps users find authentic Japanese experiences and nearby spots, often with coupons/deals.
 - Provides AI chat guidance, curated experiences, and articles.
 

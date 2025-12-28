@@ -1,0 +1,20 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "tabinaka-media-staging.vercel.app"
+        }
+      ],
+      "destination": "https://gappytravel.com/$1",
+      "permanent": true
+    }
+  ]
+}

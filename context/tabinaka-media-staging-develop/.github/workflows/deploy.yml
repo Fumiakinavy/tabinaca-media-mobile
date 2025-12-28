@@ -1,0 +1,307 @@
+name: 🚀 Deploy to App Runner
+
+on:
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'develop'
+        type: choice
+        options:
+          - develop
+          - main
+      debug_oidc:
+        description: 'Print GitHub OIDC claims (no token)'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+
+jobs:
+  oidc-debug:
+    name: 🔎 OIDC Debug (claims only)
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[debug oidc]') }}
+
+    steps:
+      - name: 🔎 Show GitHub OIDC claims (debug)
+        run: |
+          set -euo pipefail
+
+          echo "Fetching GitHub OIDC token (claims only)..."
+          response="$(curl -sSf \
+            -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com")"
+          oidc_token="$(echo "$response" | jq -r '.value')"
+
+          export OIDC_TOKEN="$oidc_token"
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+
+          token = os.environ["OIDC_TOKEN"]
+          parts = token.split(".")
+          if len(parts) != 3:
+            raise SystemExit("Invalid JWT format")
+
+          payload = parts[1].replace("-", "+").replace("_", "/")
+          payload += "=" * (-len(payload) % 4)
+          claims = json.loads(base64.b64decode(payload))
+
+          keys = [
+            "iss",
+            "aud",
+            "sub",
+            "repository",
+            "ref",
+            "environment",
+            "job_workflow_ref",
+            "workflow",
+            "actor",
+            "repository_owner",
+            "repository_id",
+            "repository_owner_id",
+          ]
+          for key in keys:
+            if key in claims:
+              print(f"{key}: {claims[key]}")
+          PY
+
+  deploy:
+    name: Deploy to ${{ github.ref_name }} environment
+    runs-on: ubuntu-latest
+    if: ${{ !(github.event_name == 'push' && contains(github.event.head_commit.message, '[debug oidc]')) }}
+    environment: ${{ github.ref_name }}
+    env:
+      AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN || secrets.AWS_ROLE_ARN }}
+
+    steps:
+      # 1. リポジトリをチェックアウト
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Node.js をセットアップ
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # 3. 依存関係インストール
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      # 4. Next.js ビルド
+      - name: 🔨 Build Next.js application
+        run: npm run build
+        env:
+          NODE_ENV: production
+          CI: "true"
+
+      # 4.5 OIDCトークンのClaim確認（デバッグ用）
+      - name: 🔎 Show GitHub OIDC claims (debug)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_oidc }}
+        run: |
+          set -euo pipefail
+
+          echo "Fetching GitHub OIDC token (claims only)..."
+          response="$(curl -sSf \
+            -H "Authorization: Bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com")"
+          oidc_token="$(echo "$response" | jq -r '.value')"
+
+          export OIDC_TOKEN="$oidc_token"
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+
+          token = os.environ["OIDC_TOKEN"]
+          parts = token.split(".")
+          if len(parts) != 3:
+            raise SystemExit("Invalid JWT format")
+
+          payload = parts[1].replace("-", "+").replace("_", "/")
+          payload += "=" * (-len(payload) % 4)
+          claims = json.loads(base64.b64decode(payload))
+
+          keys = [
+            "iss",
+            "aud",
+            "sub",
+            "repository",
+            "ref",
+            "environment",
+            "job_workflow_ref",
+            "workflow",
+            "actor",
+            "repository_owner",
+            "repository_id",
+            "repository_owner_id",
+          ]
+          for key in keys:
+            if key in claims:
+              print(f"{key}: {claims[key]}")
+          PY
+
+      - name: ✅ Validate AWS_ROLE_ARN
+        run: |
+          set -euo pipefail
+          if [ -z "${AWS_ROLE_ARN:-}" ]; then
+            echo "AWS_ROLE_ARN is not set. Set repo variable AWS_ROLE_ARN or secret AWS_ROLE_ARN."
+            exit 1
+          fi
+          echo "role-to-assume: ${AWS_ROLE_ARN}"
+          role_name="${AWS_ROLE_ARN##*/}"
+          account_id="$(echo "${AWS_ROLE_ARN}" | cut -d: -f5)"
+          echo "role-name: ${role_name}"
+          echo "account-id: ${account_id}"
+
+      # 5. AWS認証情報を設定
+      - name: 🔐 Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ap-southeast-2
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          role-session-name: GitHubActions-${{ github.ref_name }}
+          audience: sts.amazonaws.com
+
+      # 6. 環境別設定
+      - name: 🌍 Set environment variables
+        run: |
+          set -euo pipefail
+
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            IMAGE_TAG="main"
+            SECRET_ARN="arn:aws:secretsmanager:ap-southeast-2:149843772536:secret:tabinaka-media-main/prod/env"
+            SERVICE_NAME="tabinaka-media-main-ecr"
+            SERVICE_ARN="arn:aws:apprunner:ap-southeast-2:149843772536:service/tabinaka-media-main-ecr/ba6c8aa3894446d68e21f041f56cf6a3"
+          elif [ "${{ github.ref_name }}" = "develop" ]; then
+            IMAGE_TAG="develop"
+            SECRET_ARN="arn:aws:secretsmanager:ap-southeast-2:149843772536:secret:tabinaka-media-develop"
+            SERVICE_NAME="tabinaka-media-ecr"
+            SERVICE_ARN="arn:aws:apprunner:ap-southeast-2:149843772536:service/tabinaka-media-ecr/224f6e7bb3704861a07e75bb98f7aed5"
+          else
+            echo "Unsupported branch: ${{ github.ref_name }}"
+            exit 1
+          fi
+
+          # 共通設定
+          AWS_ACCOUNT_ID="149843772536"
+          REGION="ap-southeast-2"
+          ECR_REPOSITORY="tabinaka-media"
+          ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
+          FULL_IMAGE_URI="${ECR_REGISTRY}/${ECR_REPOSITORY}:${IMAGE_TAG}"
+
+          echo "AWS_ACCOUNT_ID=${AWS_ACCOUNT_ID}" >> $GITHUB_ENV
+          echo "REGION=${REGION}" >> $GITHUB_ENV
+          echo "ECR_REPOSITORY=${ECR_REPOSITORY}" >> $GITHUB_ENV
+          echo "ECR_REGISTRY=${ECR_REGISTRY}" >> $GITHUB_ENV
+          echo "FULL_IMAGE_URI=${FULL_IMAGE_URI}" >> $GITHUB_ENV
+          echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
+          echo "SECRET_ARN=${SECRET_ARN}" >> $GITHUB_ENV
+          echo "SERVICE_NAME=${SERVICE_NAME}" >> $GITHUB_ENV
+          echo "SERVICE_ARN=${SERVICE_ARN}" >> $GITHUB_ENV
+
+      # 7. ECRログイン
+      - name: 🔑 Login to ECR
+        run: |
+          aws ecr get-login-password --region ${{ env.REGION }} | docker login --username AWS --password-stdin ${{ env.ECR_REGISTRY }}
+
+      # 8. Dockerイメージビルド
+      - name: 🐳 Build Docker image
+        run: |
+          docker build \
+            --platform linux/amd64 \
+            --file Dockerfile \
+            --tag ${{ env.FULL_IMAGE_URI }} \
+            .
+
+      # 9. ECRにプッシュ
+      - name: 📤 Push to ECR
+        run: |
+          docker push ${{ env.FULL_IMAGE_URI }}
+
+      # 10. App Runnerサービス更新
+      - name: 🚀 Update App Runner service
+        run: |
+          # 最新のイメージを使用するようサービスを更新
+          aws apprunner update-service \
+            --service-arn ${{ env.SERVICE_ARN }} \
+            --region ${{ env.REGION }} \
+            --source-configuration '{
+              "ImageRepository": {
+                "ImageIdentifier": "${{ env.FULL_IMAGE_URI }}",
+                "ImageRepositoryType": "ECR",
+                "ImageConfiguration": {
+                  "Port": "8080",
+                  "StartCommand": "node server.js",
+                  "RuntimeEnvironmentSecrets": {
+                    "ACCOUNT_TOKEN_SECRET": "${{ env.SECRET_ARN }}:ACCOUNT_TOKEN_SECRET::",
+                    "AWS_BEDROCK_ACCESS_KEY_ID": "${{ env.SECRET_ARN }}:AWS_BEDROCK_ACCESS_KEY_ID::",
+                    "AWS_BEDROCK_SECRET_ACCESS_KEY": "${{ env.SECRET_ARN }}:AWS_BEDROCK_SECRET_ACCESS_KEY::",
+                    "OPENAI_API_KEY": "${{ env.SECRET_ARN }}:OPENAI_API_KEY::",
+                    "SENDGRID_API_KEY": "${{ env.SECRET_ARN }}:SENDGRID_API_KEY::",
+                    "SUPABASE_SERVICE_ROLE_KEY": "${{ env.SECRET_ARN }}:SUPABASE_SERVICE_ROLE_KEY::",
+                    "NEXT_PUBLIC_SUPABASE_URL": "${{ env.SECRET_ARN }}:NEXT_PUBLIC_SUPABASE_URL::",
+                    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "${{ env.SECRET_ARN }}:NEXT_PUBLIC_SUPABASE_ANON_KEY::",
+                    "GOOGLE_PLACES_API_KEY_SERVER": "${{ env.SECRET_ARN }}:GOOGLE_PLACES_API_KEY_SERVER::",
+                    "SLACK_WEBHOOK_URL": "${{ env.SECRET_ARN }}:SLACK_WEBHOOK_URL::",
+                    "SLACK_USER_SIGNUP_WEBHOOK_URL": "${{ env.SECRET_ARN }}:SLACK_USER_SIGNUP_WEBHOOK_URL::"
+                  },
+                  "RuntimeEnvironmentVariables": {
+                    "ALLOWED_ORIGINS": "${{ github.ref_name == 'main' && 'https://gappytravel.com,https://www.gappytravel.com' || 'https://tabinaka-media-staging.vercel.app,https://hk9pmze9ct.ap-southeast-2.awsapprunner.com' }}",
+                    "CORS_ORIGIN": "${{ github.ref_name == 'main' && 'https://gappytravel.com' || 'https://tabinaka-media-staging.vercel.app' }}",
+                    "COOKIE_DOMAIN": "${{ github.ref_name == 'main' && '.gappytravel.com' || '' }}",
+                    "NEXT_PUBLIC_BASE_URL": "${{ github.ref_name == 'main' && 'https://gappytravel.com' || 'https://tabinaka-media-staging.vercel.app' }}",
+                    "NEXT_PUBLIC_SITE_URL": "${{ github.ref_name == 'main' && 'https://gappytravel.com' || 'https://tabinaka-media-staging.vercel.app' }}"
+                  }
+                }
+              },
+              "AuthenticationConfiguration": {
+                "AccessRoleArn": "arn:aws:iam::149843772536:role/AppRunnerServiceRole-tabinaka-media"
+              }
+            }' \
+            --instance-configuration '{"InstanceRoleArn":"arn:aws:iam::149843772536:role/AppRunnerServiceRole-tabinaka-media"}' \
+            --health-check-configuration 'Protocol=HTTP,Path=/api/health,Interval=20,Timeout=10,HealthyThreshold=1,UnhealthyThreshold=5'
+
+      # 11. デプロイ完了通知
+      - name: ✅ Deployment completed
+        run: |
+          echo "🎉 Deployment to ${{ github.ref_name }} environment completed!"
+          echo "Service: ${{ env.SERVICE_NAME }}"
+          echo "Image: ${{ env.FULL_IMAGE_URI }}"
+
+  # デプロイ後のヘルスチェック
+  health-check:
+    name: 🏥 Health Check
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: success()
+
+    steps:
+      - name: 🔍 Wait for service to be ready
+        run: |
+          SERVICE_URL="${{ github.ref_name == 'main' && 'https://pzdxm5smtw.ap-southeast-2.awsapprunner.com' || 'https://hk9pmze9ct.ap-southeast-2.awsapprunner.com' }}"
+
+          echo "🔍 Checking service health at: $SERVICE_URL"
+
+          # 最大5分待機してヘルスチェック
+          for i in {1..30}; do
+            if curl -f -s "$SERVICE_URL" > /dev/null 2>&1; then
+              echo "✅ Service is healthy!"
+              exit 0
+            fi
+            echo "⏳ Waiting for service to be ready... ($i/30)"
+            sleep 10
+          done
+
+          echo "❌ Service failed to become healthy within 5 minutes"
+          exit 1
