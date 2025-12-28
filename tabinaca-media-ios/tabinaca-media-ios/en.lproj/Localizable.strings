@@ -1,0 +1,11 @@
+"tab.home" = "Home";
+"tab.chat" = "Chat";
+"tab.experiences" = "Experiences";
+"tab.likes" = "Likes";
+
+"home.title" = "Home";
+"chat.title" = "Chat";
+"experiences.title" = "Experiences";
+"likes.title" = "Likes";
+"articles.title" = "Articles";
+"quiz.title" = "Quiz";

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct tabinaca_media_iosApp: App {
+    @StateObject private var authStore = AuthStore()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authStore)
         }
     }
 }

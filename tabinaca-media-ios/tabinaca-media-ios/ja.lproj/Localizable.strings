@@ -1,0 +1,11 @@
+"tab.home" = "ホーム";
+"tab.chat" = "チャット";
+"tab.experiences" = "体験";
+"tab.likes" = "お気に入り";
+
+"home.title" = "ホーム";
+"chat.title" = "チャット";
+"experiences.title" = "体験";
+"likes.title" = "お気に入り";
+"articles.title" = "記事";
+"quiz.title" = "診断";
