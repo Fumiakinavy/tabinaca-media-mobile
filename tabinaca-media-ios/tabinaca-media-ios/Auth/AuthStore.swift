@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import SwiftUI
 
@@ -11,8 +12,8 @@ final class AuthStore: ObservableObject {
 
     var isAuthenticated: Bool { state == .authenticated }
 
-    init(service: AuthService = AuthServiceFactory.make()) {
-        self.service = service
+    init(service: AuthService? = nil) {
+        self.service = service ?? AuthServiceFactory.make()
         Task { await refreshSession() }
     }
 
