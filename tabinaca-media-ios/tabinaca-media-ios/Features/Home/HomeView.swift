@@ -10,7 +10,7 @@ struct HomeView: View {
                     Text("Discover Shibuya")
                         .font(AppTypography.title)
                         .foregroundStyle(AppColors.textPrimary)
-                    Text("Authentic experiences, articles, and AI travel help")
+                    Text("Authentic experiences and AI travel help")
                         .font(AppTypography.body)
                         .foregroundStyle(AppColors.textSecondary)
                 }
@@ -28,10 +28,6 @@ struct HomeView: View {
                     }
                     .foregroundStyle(AppColors.primary)
 
-                    NavigationLink("Browse Latest Articles") {
-                        ArticlesView()
-                    }
-                    .foregroundStyle(AppColors.primary)
                 }
             }
             .padding(AppSpacing.lg)
