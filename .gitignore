@@ -1,0 +1,54 @@
+# iOS build artifacts
+*.ipa
+*.xcarchive
+*.dSYM
+*.app
+
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Sensitive configuration files containing API keys and secrets
+context/tabinaka-media-staging-develop/apprunner-*.json
+context/tabinaka-media-staging-develop/copilot-ssm-permissions-policy.json
+context/tabinaka-media-staging-develop/oidc-trust-policy-github-actions.json
+context/tabinaka-media-staging-develop/trust-policy.json
+context/tabinaka-media-staging-develop/ngrok.yml
+context/tabinaka-media-staging-develop/wrangler.toml
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Node modules and lock files
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Temporary files
+*.tmp
+*.log
